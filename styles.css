@@ -1,0 +1,21 @@
+/* Custom base styles and utilities shared across all pages */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+}
+.gradient-text {
+    background: linear-gradient(to right, #090eb3, #008be9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.glass-nav {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+main > * {
+    animation: fadeIn 0.4s ease-out forwards;
+}
