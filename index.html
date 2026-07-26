@@ -23,7 +23,8 @@
                             cta: '#0054c2',
                             teal: '#1574a4',
                             purple: '#aa5eda',
-                            active: '#17cad2'
+                            active: '#17cad2',
+                            deep: '#060a1f'
                         }
                     },
                     animation: {
@@ -42,33 +43,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="text-slate-800 antialiased overflow-x-hidden">
+<body class="bg-clawix-deep text-clawix-muted antialiased overflow-x-hidden">
 
-    <nav class="glass-nav fixed w-full z-50 top-0 border-b border-gray-100 transition-all duration-300">
+    <nav class="fixed w-full z-50 top-0 bg-clawix-deep/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex-shrink-0 flex items-center">
-                    <img src="assets/AIBYMLSG_primary_logo.png" alt="AIBYML SG Logo" class="h-10 w-auto mr-3">
+                    <img src="assets/aibyml_sg_icon_background.png" alt="AIBYML SG Logo" class="h-14 w-14 rounded-lg mr-3">
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html" class="nav-link text-sm font-medium text-clawix-indigo font-bold hover:text-clawix-indigo transition-colors">Home</a>
-                    <a href="product.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Product</a>
-                    <a href="enterprise.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Enterprise</a>
-                    <a href="learn.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Learn</a>
-                    <a href="blog.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Blog</a>
-                    <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">About Us</a>
-                    <div class="flex items-center space-x-4 ml-4 border-l border-gray-200 pl-4">
-                        <a href="https://github.com/ClawixAI/clawix" target="_blank" class="text-sm font-medium text-clawix-indigo border border-clawix-indigo/30 hover:bg-clawix-bg px-4 py-2 rounded-lg transition-all">GitHub</a>
-                        <a href="enterprise.html" class="bg-clawix-cta hover:bg-clawix-indigo text-white px-5 py-2 rounded-lg text-sm font-medium transition-all shadow-md shadow-clawix-cta/20">Get Started</a>
+                    <a href="index.html" class="nav-link text-sm font-medium text-white font-bold hover:text-clawix-active transition-colors">Home</a>
+                    <a href="product.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Product</a>
+                    <a href="enterprise.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Enterprise</a>
+                    <a href="learn.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Learn</a>
+                    <a href="blog.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Insights</a>
+                    <a href="about.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">About Us</a>
+                    <div class="flex items-center space-x-4 ml-4 border-l border-white/10 pl-4">
+                        <a href="https://github.com/ClawixAI/clawix" target="_blank" class="text-sm font-medium text-clawix-muted border border-white/20 hover:bg-white/5 hover:text-white px-4 py-2 rounded-lg transition-all">GitHub</a>
+                        <a href="enterprise.html" class="bg-clawix-active hover:opacity-90 text-clawix-deep px-5 py-2 rounded-lg text-sm font-medium transition-all">Get Started</a>
                     </div>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-clawix-indigo focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-clawix-muted hover:text-clawix-active focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -78,80 +79,84 @@
         </div>
 
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full">
+        <div id="mobile-menu" class="hidden md:hidden bg-clawix-deep border-b border-white/10 absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
-                <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-indigo font-bold hover:bg-clawix-bg hover:text-clawix-indigo">Home</a>
-                <a href="product.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Product</a>
-                <a href="enterprise.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Enterprise</a>
-                <a href="learn.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Learn</a>
-                <a href="blog.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Blog</a>
-                <a href="about.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">About Us</a>
+                <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white font-bold hover:bg-white/5 hover:text-clawix-active">Home</a>
+                <a href="product.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Product</a>
+                <a href="enterprise.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Enterprise</a>
+                <a href="learn.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Learn</a>
+                <a href="blog.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Insights</a>
+                <a href="about.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">About Us</a>
             </div>
         </div>
     </nav>
 
 <main class="pt-20">
         <!-- Hero Section -->
-        <div class="bg-gradient-to-b from-clawix-bg to-white pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden relative">
+        <div class="bg-clawix-deep pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-clawix-cta text-sm font-semibold mb-8 border border-blue-100 shadow-sm">
-                    <span class="flex h-2 w-2 rounded-full bg-clawix-cta mr-2"></span>
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/5 text-clawix-active text-sm font-semibold mb-8 border border-white/10">
+                    <span class="flex h-2 w-2 rounded-full bg-clawix-active mr-2"></span>
                     AIBYML SG — Governed AI Services
                 </div>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-clawix-indigo mb-6 leading-tight">
-                    AI services your board can trust <br class="hidden md:block"/> 
-                    <span class="gradient-text">— and your team can operate.</span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                    AI services your board can trust <br class="hidden md:block"/>
+                    <span class="bg-gradient-to-r from-clawix-active to-clawix-sky bg-clip-text text-transparent">— and your team can operate.</span>
                 </h1>
-                <p class="mt-4 max-w-3xl mx-auto text-xl text-slate-600 mb-8 leading-relaxed">
+                <p class="mt-4 max-w-3xl mx-auto text-xl text-clawix-muted mb-8 leading-relaxed">
                     AIBYML SG helps Southeast Asian organisations become AI‑native enterprises, combining governed AI consulting with an enterprise intelligence platform that plans before it builds, records every critical decision, and leaves your team stronger, not dependent.
                 </p>
-                
+
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-                    <a href="enterprise.html" class="bg-clawix-cta hover:bg-clawix-indigo text-white px-8 py-4 rounded-xl text-lg font-medium transition-all shadow-lg shadow-clawix-cta/30 flex items-center justify-center">
+                    <a href="enterprise.html" class="bg-clawix-active hover:opacity-90 text-clawix-deep px-8 py-4 rounded-xl text-lg font-medium transition-all shadow-lg shadow-clawix-active/10 flex items-center justify-center">
                         Get Started
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
                 </div>
 
-                <p class="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-12">
+                <p class="text-sm font-semibold text-clawix-muted uppercase tracking-widest mb-12">
                     Based in Singapore, built for ASEAN’s most regulated and trust‑sensitive industries.
                 </p>
 
                 <!-- Hero Bullets / Value Props -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
-                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-blue-100/50 shadow-sm">
-                        <div class="w-10 h-10 bg-blue-100 text-clawix-cta rounded-lg flex items-center justify-center mb-4">
+                    <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10">
+                        <div class="w-10 h-10 bg-clawix-sky/10 text-clawix-sky rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
-                        <h3 class="font-bold text-slate-800 mb-2">Governed AI Process</h3>
-                        <p class="text-sm text-slate-600">Full audit trail of significant AI decisions and human reviews.</p>
+                        <h3 class="font-bold text-white mb-2">Governed AI Process</h3>
+                        <p class="text-sm text-clawix-muted">Full audit trail of significant AI decisions and human reviews.</p>
                     </div>
-                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-blue-100/50 shadow-sm">
-                        <div class="w-10 h-10 bg-teal-100 text-clawix-active rounded-lg flex items-center justify-center mb-4">
+                    <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10">
+                        <div class="w-10 h-10 bg-clawix-active/10 text-clawix-active rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                         </div>
-                        <h3 class="font-bold text-slate-800 mb-2">Enterprise Intelligence</h3>
-                        <p class="text-sm text-slate-600">Multi‑agent orchestration, from discovery to delivery.</p>
+                        <h3 class="font-bold text-white mb-2">Enterprise Intelligence</h3>
+                        <p class="text-sm text-clawix-muted">Multi‑agent orchestration, from discovery to delivery.</p>
                     </div>
-                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-blue-100/50 shadow-sm">
-                        <div class="w-10 h-10 bg-purple-100 text-clawix-purple rounded-lg flex items-center justify-center mb-4">
+                    <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10">
+                        <div class="w-10 h-10 bg-clawix-purple/10 text-clawix-purple rounded-lg flex items-center justify-center mb-4">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         </div>
-                        <h3 class="font-bold text-slate-800 mb-2">Capability Transfer</h3>
-                        <p class="text-sm text-slate-600">Every project ends with a playbook your team can run.</p>
+                        <h3 class="font-bold text-white mb-2">Capability Transfer</h3>
+                        <p class="text-sm text-clawix-muted">Every project ends with a playbook your team can run.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="py-12 bg-white">
+        <div class="py-12 bg-clawix-deep">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-center text-sm font-semibold text-slate-400 uppercase tracking-widest mb-10">Featured On</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60">
-            <img src="assets/e27_logo.png" alt="e27" style="width: 200px; height: auto;" class="h-10 w-auto hover:opacity-100 transition-opacity">
-            <img src="assets/Hadtech_logo.png" alt="Hadtech College" style="width: 200px; height: auto;" class="h-10 w-auto hover:opacity-100 transition-opacity">
-            <img src="assets/e27_Flux_Series_logo.png" alt="e27 Flux Series" style="width: 200px; height: auto;" class="h-10 w-auto hover:opacity-100 transition-opacity">
-            <img src="assets/OPC_logo.png" alt="OPC" style="width: 200px; height: auto;" class="h-10 w-auto hover:opacity-100 transition-opacity">
+        <p class="text-center text-sm font-semibold text-clawix-muted uppercase tracking-widest mb-10">Featured On</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+            <img src="assets/e27_logo.png" alt="e27" style="width: 200px; height: auto;" class="h-10 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+            <img src="assets/Hadtech_logo.png" alt="Hadtech College" style="width: 200px; height: auto;" class="h-10 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center hover:bg-white/10 transition-colors w-full">
+                <img src="assets/e27_Flux_Series_logo.png" alt="e27 Flux Series" style="width: 200px; height: auto;" class="h-10 w-auto">
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center hover:bg-white/10 transition-colors w-full">
+                <img src="assets/OPC_logo.png" alt="OPC" style="width: 200px; height: auto;" class="h-10 w-auto">
+            </div>
         </div>
     </div>
 </div>
@@ -159,58 +164,58 @@
         </div>
 
         <!-- Section 1 & 2: The Problem vs Solution -->
-        <div class="py-24 bg-white">
+        <div class="py-24 bg-clawix-deep border-t border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <!-- The Problem -->
-                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-10 lg:p-12">
-                        <div class="inline-block px-4 py-1 rounded-full bg-red-100 text-red-700 text-sm font-bold mb-6">The Industry Problem</div>
-                        <h2 class="text-3xl font-bold text-slate-800 mb-6">Flooded with tools, lacking control.</h2>
-                        <p class="text-lg text-slate-600 mb-8">Most organisations are flooded with AI tools and vendor promises, but lack three critical things:</p>
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-10 lg:p-12">
+                        <div class="inline-block px-4 py-1 rounded-full bg-red-500/10 text-red-400 text-sm font-bold mb-6">The Industry Problem</div>
+                        <h2 class="text-3xl font-bold text-white mb-6">Flooded with tools, lacking control.</h2>
+                        <p class="text-lg text-clawix-muted mb-8">Most organisations are flooded with AI tools and vendor promises, but lack three critical things:</p>
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-start">
-                                <svg class="w-6 h-6 text-red-500 mr-3 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="text-slate-700">A clear, governed process for designing and deploying AI.</span>
+                                <svg class="w-6 h-6 text-red-400 mr-3 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="text-clawix-muted">A clear, governed process for designing and deploying AI.</span>
                             </li>
                             <li class="flex items-start">
-                                <svg class="w-6 h-6 text-red-500 mr-3 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="text-slate-700">Visibility into how AI decisions are made on their behalf.</span>
+                                <svg class="w-6 h-6 text-red-400 mr-3 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="text-clawix-muted">Visibility into how AI decisions are made on their behalf.</span>
                             </li>
                             <li class="flex items-start">
-                                <svg class="w-6 h-6 text-red-500 mr-3 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="text-slate-700">The internal capability to operate and extend what vendors build.</span>
+                                <svg class="w-6 h-6 text-red-400 mr-3 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="text-clawix-muted">The internal capability to operate and extend what vendors build.</span>
                             </li>
                         </ul>
-                        <div class="p-4 bg-red-50 rounded-xl border border-red-100 text-red-800 font-medium">
+                        <div class="p-4 bg-red-500/10 rounded-xl border border-red-500/20 text-red-300 font-medium">
                             The result: scattered POCs, unclear risk, and growing dependency on external providers.
                         </div>
                     </div>
 
                     <!-- The Solution -->
-                    <div class="bg-gradient-to-br from-clawix-indigo to-clawix-cta rounded-3xl p-10 lg:p-12 shadow-xl shadow-clawix-indigo/20 text-white">
-                        <div class="inline-block px-4 py-1 rounded-full bg-white/20 text-white text-sm font-bold mb-6 border border-white/30">The AIBYML Solution</div>
+                    <div class="bg-gradient-to-br from-clawix-indigo to-clawix-deep rounded-3xl p-10 lg:p-12 border border-clawix-active/20 text-white">
+                        <div class="inline-block px-4 py-1 rounded-full bg-white/10 text-clawix-active text-sm font-bold mb-6 border border-white/10">The AIBYML Solution</div>
                         <h2 class="text-3xl font-bold mb-6">A single, end‑to‑end governed process.</h2>
-                        <p class="text-lg text-blue-100 mb-8">We combine three core pillars to take you from readiness assessment to production MVPs and long‑term AI capability inside your organisation.</p>
+                        <p class="text-lg text-clawix-muted mb-8">We combine three core pillars to take you from readiness assessment to production MVPs and long‑term AI capability inside your organisation.</p>
                         <ul class="space-y-6">
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mr-4 shrink-0">1</div>
+                                <div class="w-8 h-8 rounded-full bg-clawix-active/20 text-clawix-active flex items-center justify-center mr-4 shrink-0">1</div>
                                 <div>
-                                    <h4 class="font-bold text-xl">A Governed AI Consulting Practice</h4>
-                                    <p class="text-blue-100 text-sm mt-1">Strategic planning by a business–system paired team.</p>
+                                    <h4 class="font-bold text-xl text-white">A Governed AI Consulting Practice</h4>
+                                    <p class="text-clawix-muted text-sm mt-1">Strategic planning by a business–system paired team.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mr-4 shrink-0">2</div>
+                                <div class="w-8 h-8 rounded-full bg-clawix-active/20 text-clawix-active flex items-center justify-center mr-4 shrink-0">2</div>
                                 <div>
-                                    <h4 class="font-bold text-xl">An Enterprise Intelligence Platform</h4>
-                                    <p class="text-blue-100 text-sm mt-1">Multi-agent orchestration powered by our Open Source/Open Core.</p>
+                                    <h4 class="font-bold text-xl text-white">An Enterprise Intelligence Platform</h4>
+                                    <p class="text-clawix-muted text-sm mt-1">Multi-agent orchestration powered by our Open Source/Open Core.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center mr-4 shrink-0">3</div>
+                                <div class="w-8 h-8 rounded-full bg-clawix-active/20 text-clawix-active flex items-center justify-center mr-4 shrink-0">3</div>
                                 <div>
-                                    <h4 class="font-bold text-xl">Structured Capability Transfer</h4>
-                                    <p class="text-blue-100 text-sm mt-1">We deploy it with your team, then hand over the keys.</p>
+                                    <h4 class="font-bold text-xl text-white">Structured Capability Transfer</h4>
+                                    <p class="text-clawix-muted text-sm mt-1">We deploy it with your team, then hand over the keys.</p>
                                 </div>
                             </li>
                         </ul>
@@ -220,45 +225,45 @@
         </div>
 
         <!-- Section 4: Three Flagship Offers (Product Tiles) -->
-        <div class="py-24 bg-slate-50 border-t border-gray-200">
+        <div class="py-24 bg-clawix-deep border-t border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-clawix-indigo mb-4">Our Flagship Offers</h2>
-                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">Structured pathways to transform your organisation into an AI-native enterprise.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Flagship Offers</h2>
+                    <p class="text-lg text-clawix-muted max-w-2xl mx-auto">Structured pathways to transform your organisation into an AI-native enterprise.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Tile 1 -->
-                    <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg hover:border-clawix-indigo/50 transition-all flex flex-col h-full group">
-                        <div class="w-14 h-14 bg-blue-50 text-clawix-cta rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-cta group-hover:text-white transition-colors">
+                    <div class="bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-clawix-sky/50 transition-all flex flex-col h-full group">
+                        <div class="w-14 h-14 bg-clawix-sky/10 text-clawix-sky rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-sky group-hover:text-clawix-deep transition-colors">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-slate-800 mb-2">AI Readiness & Enterprise Roadmap</h3>
-                        <p class="text-clawix-indigo font-medium mb-4 text-sm">3–4 Weeks</p>
-                        <p class="text-slate-800 font-medium mb-4">Know where AI fits, what to build first, and how to do it safely.</p>
-                        <p class="text-slate-600 text-sm mb-6 flex-grow">We assess your data, workflows, and governance, then co‑design a 12–18 month roadmap that links concrete AI use cases to business outcomes, policies, and capabilities.</p>
-                        <div class="border-t border-gray-100 pt-6">
-                            <h4 class="font-bold text-sm text-slate-800 mb-3 uppercase tracking-wider">Key Outcomes</h4>
-                            <ul class="space-y-2 text-sm text-slate-600">
-                                <li class="flex items-start"><span class="text-clawix-cta mr-2">✓</span> Clear view of AI value across the org</li>
-                                <li class="flex items-start"><span class="text-clawix-cta mr-2">✓</span> Risk & governance map (PDPA/GDPR)</li>
-                                <li class="flex items-start"><span class="text-clawix-cta mr-2">✓</span> Phased POC/MVP execution plan</li>
+                        <h3 class="text-2xl font-bold text-white mb-2">AI Readiness & Enterprise Roadmap</h3>
+                        <p class="text-clawix-sky font-medium mb-4 text-sm">3–4 Weeks</p>
+                        <p class="text-white font-medium mb-4">Know where AI fits, what to build first, and how to do it safely.</p>
+                        <p class="text-clawix-muted text-sm mb-6 flex-grow">We assess your data, workflows, and governance, then co‑design a 12–18 month roadmap that links concrete AI use cases to business outcomes, policies, and capabilities.</p>
+                        <div class="border-t border-white/10 pt-6">
+                            <h4 class="font-bold text-sm text-white mb-3 uppercase tracking-wider">Key Outcomes</h4>
+                            <ul class="space-y-2 text-sm text-clawix-muted">
+                                <li class="flex items-start"><span class="text-clawix-sky mr-2">✓</span> Clear view of AI value across the org</li>
+                                <li class="flex items-start"><span class="text-clawix-sky mr-2">✓</span> Risk & governance map (PDPA/GDPR)</li>
+                                <li class="flex items-start"><span class="text-clawix-sky mr-2">✓</span> Phased POC/MVP execution plan</li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- Tile 2 -->
-                    <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg hover:border-clawix-active/50 transition-all flex flex-col h-full group">
-                        <div class="w-14 h-14 bg-teal-50 text-clawix-active rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-active group-hover:text-white transition-colors">
+                    <div class="bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-clawix-active/50 transition-all flex flex-col h-full group">
+                        <div class="w-14 h-14 bg-clawix-active/10 text-clawix-active rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-active group-hover:text-clawix-deep transition-colors">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Governed AI POC & MVP Builds</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">Governed AI POC & MVP Builds</h3>
                         <p class="text-clawix-active font-medium mb-4 text-sm">4–16 Weeks</p>
-                        <p class="text-slate-800 font-medium mb-4">Build AI features that work in production — with governance built in.</p>
-                        <p class="text-slate-600 text-sm mb-6 flex-grow">We deliver POCs and MVPs using our two‑tier operating model. Every engagement includes quality gates, compliance checks, and a full AI Decision Chronicle.</p>
-                        <div class="border-t border-gray-100 pt-6">
-                            <h4 class="font-bold text-sm text-slate-800 mb-3 uppercase tracking-wider">Key Outcomes</h4>
-                            <ul class="space-y-2 text-sm text-slate-600">
+                        <p class="text-white font-medium mb-4">Build AI features that work in production — with governance built in.</p>
+                        <p class="text-clawix-muted text-sm mb-6 flex-grow">We deliver POCs and MVPs using our two‑tier operating model. Every engagement includes quality gates, compliance checks, and a full AI Decision Chronicle.</p>
+                        <div class="border-t border-white/10 pt-6">
+                            <h4 class="font-bold text-sm text-white mb-3 uppercase tracking-wider">Key Outcomes</h4>
+                            <ul class="space-y-2 text-sm text-clawix-muted">
                                 <li class="flex items-start"><span class="text-clawix-active mr-2">✓</span> Working POC or MVP deployment</li>
                                 <li class="flex items-start"><span class="text-clawix-active mr-2">✓</span> Reconciled business & tech strategy</li>
                                 <li class="flex items-start"><span class="text-clawix-active mr-2">✓</span> AI Decision Chronicle & quality report</li>
@@ -267,17 +272,17 @@
                     </div>
 
                     <!-- Tile 3 -->
-                    <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg hover:border-clawix-purple/50 transition-all flex flex-col h-full group">
-                        <div class="w-14 h-14 bg-purple-50 text-clawix-purple rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-purple group-hover:text-white transition-colors">
+                    <div class="bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-clawix-purple/50 transition-all flex flex-col h-full group">
+                        <div class="w-14 h-14 bg-clawix-purple/10 text-clawix-purple rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-purple group-hover:text-clawix-deep transition-colors">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Enterprise Platform & Transfer</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">Enterprise Platform & Transfer</h3>
                         <p class="text-clawix-purple font-medium mb-4 text-sm">Continuous Delivery</p>
-                        <p class="text-slate-800 font-medium mb-4">Turn AI from a “black box” into an operating system your team can run.</p>
-                        <p class="text-slate-600 text-sm mb-6 flex-grow">We deploy our orchestration platform with your team, then deliver a structured Capability Transfer Package so your people understand how to run and extend it.</p>
-                        <div class="border-t border-gray-100 pt-6">
-                            <h4 class="font-bold text-sm text-slate-800 mb-3 uppercase tracking-wider">Key Outcomes</h4>
-                            <ul class="space-y-2 text-sm text-slate-600">
+                        <p class="text-white font-medium mb-4">Turn AI from a “black box” into an operating system your team can run.</p>
+                        <p class="text-clawix-muted text-sm mb-6 flex-grow">We deploy our orchestration platform with your team, then deliver a structured Capability Transfer Package so your people understand how to run and extend it.</p>
+                        <div class="border-t border-white/10 pt-6">
+                            <h4 class="font-bold text-sm text-white mb-3 uppercase tracking-wider">Key Outcomes</h4>
+                            <ul class="space-y-2 text-sm text-clawix-muted">
                                 <li class="flex items-start"><span class="text-clawix-purple mr-2">✓</span> Live client portal for AI visibility</li>
                                 <li class="flex items-start"><span class="text-clawix-purple mr-2">✓</span> Complete Capability Transfer Package</li>
                                 <li class="flex items-start"><span class="text-clawix-purple mr-2">✓</span> True internal AI operating independence</li>
@@ -289,106 +294,106 @@
         </div>
 
         <!-- Section 3: How we work (7-stage lifecycle) -->
-        <div class="py-24 bg-white border-t border-gray-200">
+        <div class="py-24 bg-clawix-deep border-t border-white/10">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Engagement Lifecycle</h2>
-                    <p class="text-lg text-slate-600">A rigorous 7-stage process ensuring governance from discovery to handover.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Engagement Lifecycle</h2>
+                    <p class="text-lg text-clawix-muted">A rigorous 7-stage process ensuring governance from discovery to handover.</p>
                 </div>
-                
-                <div class="relative border-l-4 border-blue-100 ml-6 md:ml-12 space-y-12 pb-8">
+
+                <div class="relative border-l-4 border-white/10 ml-6 md:ml-12 space-y-12 pb-8">
                     <!-- Step 1 -->
                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-clawix-cta rounded-full border-4 border-white flex items-center justify-center text-white font-bold shadow-md">1</div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2">Inquiry & Scoping</h4>
-                        <p class="text-slate-600">You share your brief; we assess fit, clarify objectives, and propose a focused POC or MVP.</p>
+                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-clawix-active rounded-full border-4 border-clawix-deep flex items-center justify-center text-clawix-deep font-bold">1</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Inquiry & Scoping</h4>
+                        <p class="text-clawix-muted">You share your brief; we assess fit, clarify objectives, and propose a focused POC or MVP.</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full border-4 border-blue-200 flex items-center justify-center text-clawix-cta font-bold shadow-sm">2</div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2">Discovery & Strategy</h4>
-                        <p class="text-slate-600">Business and technical planning run in parallel, then are reconciled into a single, agreed plan.</p>
+                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-clawix-deep rounded-full border-4 border-white/20 flex items-center justify-center text-clawix-muted font-bold">2</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Discovery & Strategy</h4>
+                        <p class="text-clawix-muted">Business and technical planning run in parallel, then are reconciled into a single, agreed plan.</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full border-4 border-blue-200 flex items-center justify-center text-clawix-cta font-bold shadow-sm">3</div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2">Planning & Setup</h4>
-                        <p class="text-slate-600">We define scope, sprints, governance rules, and quality metrics before any build starts.</p>
+                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-clawix-deep rounded-full border-4 border-white/20 flex items-center justify-center text-clawix-muted font-bold">3</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Planning & Setup</h4>
+                        <p class="text-clawix-muted">We define scope, sprints, governance rules, and quality metrics before any build starts.</p>
                     </div>
                     <!-- Step 4 -->
                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full border-4 border-blue-200 flex items-center justify-center text-clawix-cta font-bold shadow-sm">4</div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2">Execution (Build)</h4>
-                        <p class="text-slate-600">A dedicated delivery unit builds, tests, and iterates with quality and compliance gates.</p>
+                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-clawix-deep rounded-full border-4 border-white/20 flex items-center justify-center text-clawix-muted font-bold">4</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Execution (Build)</h4>
+                        <p class="text-clawix-muted">A dedicated delivery unit builds, tests, and iterates with quality and compliance gates.</p>
                     </div>
                     <!-- Step 5 -->
                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full border-4 border-blue-200 flex items-center justify-center text-clawix-cta font-bold shadow-sm">5</div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2">Quality & Review</h4>
-                        <p class="text-slate-600">We review outputs against success criteria, policies, and risk thresholds.</p>
+                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-clawix-deep rounded-full border-4 border-white/20 flex items-center justify-center text-clawix-muted font-bold">5</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Quality & Review</h4>
+                        <p class="text-clawix-muted">We review outputs against success criteria, policies, and risk thresholds.</p>
                     </div>
                     <!-- Step 6 -->
                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full border-4 border-blue-200 flex items-center justify-center text-clawix-cta font-bold shadow-sm">6</div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2">Delivery & Capability Transfer</h4>
-                        <p class="text-slate-600">We deliver the solution plus a Capability Transfer Package so your team can run it.</p>
+                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-clawix-deep rounded-full border-4 border-white/20 flex items-center justify-center text-clawix-muted font-bold">6</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Delivery & Capability Transfer</h4>
+                        <p class="text-clawix-muted">We deliver the solution plus a Capability Transfer Package so your team can run it.</p>
                     </div>
                     <!-- Step 7 -->
                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-clawix-indigo rounded-full border-4 border-white flex items-center justify-center text-white font-bold shadow-md">7</div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2">Post‑Delivery Support</h4>
-                        <p class="text-slate-600">Time‑boxed support to stabilise the solution and plan the next phase.</p>
+                        <div class="absolute -left-5 md:-left-6 top-0 w-10 h-10 md:w-12 md:h-12 bg-clawix-active rounded-full border-4 border-clawix-deep flex items-center justify-center text-clawix-deep font-bold">7</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Post‑Delivery Support</h4>
+                        <p class="text-clawix-muted">Time‑boxed support to stabilise the solution and plan the next phase.</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Section 5: Why AIBYML -->
-        <div class="py-24 bg-clawix-bg border-t border-blue-100">
+        <div class="py-24 bg-clawix-deep border-t border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-clawix-indigo mb-4">Why AIBYML SG</h2>
+                    <h2 class="text-3xl font-bold text-white mb-4">Why AIBYML SG</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50 text-center">
-                        <div class="w-12 h-12 bg-blue-50 text-clawix-cta rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 text-center">
+                        <div class="w-12 h-12 bg-clawix-sky/10 text-clawix-sky rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
-                        <h4 class="font-bold text-slate-800 mb-2">Governance-First</h4>
-                        <p class="text-sm text-slate-600">Contracts, policies, and technical safeguards aligned by design.</p>
+                        <h4 class="font-bold text-white mb-2">Governance-First</h4>
+                        <p class="text-sm text-clawix-muted">Contracts, policies, and technical safeguards aligned by design.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50 text-center">
-                        <div class="w-12 h-12 bg-blue-50 text-clawix-cta rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 text-center">
+                        <div class="w-12 h-12 bg-clawix-sky/10 text-clawix-sky rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
                         </div>
-                        <h4 class="font-bold text-slate-800 mb-2">Process > Tools</h4>
-                        <p class="text-sm text-slate-600">We plan before we build, and rigorously document every critical decision.</p>
+                        <h4 class="font-bold text-white mb-2">Process > Tools</h4>
+                        <p class="text-sm text-clawix-muted">We plan before we build, and rigorously document every critical decision.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50 text-center">
-                        <div class="w-12 h-12 bg-blue-50 text-clawix-cta rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 text-center">
+                        <div class="w-12 h-12 bg-clawix-sky/10 text-clawix-sky rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                         </div>
-                        <h4 class="font-bold text-slate-800 mb-2">Client Capability</h4>
-                        <p class="text-sm text-slate-600">Capability transfer is a mandatory deliverable, not a nice‑to‑have.</p>
+                        <h4 class="font-bold text-white mb-2">Client Capability</h4>
+                        <p class="text-sm text-clawix-muted">Capability transfer is a mandatory deliverable, not a nice‑to‑have.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50 text-center">
-                        <div class="w-12 h-12 bg-blue-50 text-clawix-cta rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 text-center">
+                        <div class="w-12 h-12 bg-clawix-sky/10 text-clawix-sky rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
-                        <h4 class="font-bold text-slate-800 mb-2">ASEAN-Centric</h4>
-                        <p class="text-sm text-slate-600">Based in Singapore, tuned for SE Asian regulations, cultures, and markets.</p>
+                        <h4 class="font-bold text-white mb-2">ASEAN-Centric</h4>
+                        <p class="text-sm text-clawix-muted">Based in Singapore, tuned for SE Asian regulations, cultures, and markets.</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Section 6: Final CTA -->
-        <div class="bg-clawix-indigo py-20">
+        <div class="bg-clawix-deep border-t border-white/10 py-20">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to explore your first governed AI project?</h2>
-                <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">Next step: A 45‑minute AI Readiness Call to identify 1–2 high‑impact, low‑risk starting points for your organization.</p>
+                <p class="text-clawix-muted text-lg mb-10 max-w-2xl mx-auto">Next step: A 45‑minute AI Readiness Call to identify 1–2 high‑impact, low‑risk starting points for your organization.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="https://www.calendly.com/ianngyy" target="_blank" class="bg-white text-clawix-indigo hover:bg-gray-50 px-8 py-4 rounded-xl font-bold transition-colors flex items-center justify-center shadow-lg">
+                    <a href="https://www.calendly.com/ianngyy" target="_blank" class="bg-clawix-active text-clawix-deep hover:opacity-90 px-8 py-4 rounded-xl font-bold transition-all flex items-center justify-center">
                         Book Your Readiness Call
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
@@ -397,29 +402,29 @@
         </div>
 </main>
 
-    <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+    <footer class="bg-clawix-deep border-t border-white/10 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
                 <div class="col-span-2 md:col-span-1">
-                    <h4 class="font-bold text-slate-800 mb-4">AIBYML.SG</h4>
+                    <h4 class="font-bold text-white mb-4">AIBYML.SG</h4>
                 </div>
                 <div>
-                    <h4 class="font-bold text-slate-800 mb-4">Navigation</h4>
-                    <ul class="space-y-2 text-sm text-slate-500">
-                        <li><a href="index.html" class="hover:text-clawix-indigo">Home</a></li>
-                        <li><a href="product.html" class="hover:text-clawix-indigo">Product</a></li>
-                        <li><a href="enterprise.html" class="hover:text-clawix-indigo">Enterprise</a></li>
-                        <li><a href="learn.html" class="hover:text-clawix-indigo">Learn</a></li>
-                        <li><a href="blog.html" class="hover:text-clawix-indigo">Blog</a></li>
-                        <li><a href="about.html" class="hover:text-clawix-indigo">About Us</a></li>
+                    <h4 class="font-bold text-white mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-clawix-muted">
+                        <li><a href="index.html" class="hover:text-clawix-active">Home</a></li>
+                        <li><a href="product.html" class="hover:text-clawix-active">Product</a></li>
+                        <li><a href="enterprise.html" class="hover:text-clawix-active">Enterprise</a></li>
+                        <li><a href="learn.html" class="hover:text-clawix-active">Learn</a></li>
+                        <li><a href="blog.html" class="hover:text-clawix-active">Insights</a></li>
+                        <li><a href="about.html" class="hover:text-clawix-active">About Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-100 pt-8 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-clawix-muted flex flex-col md:flex-row justify-between items-center">
                 <p>&copy; 2026 AIBYML.SG. All rights reserved.</p>
                 <div class="mt-4 md:mt-0 space-x-4">
-                    <a href="#" class="hover:text-clawix-indigo">Privacy Policy</a>
-                    <a href="#" class="hover:text-clawix-indigo">Terms of Service</a>
+                    <a href="privacy.html" class="hover:text-clawix-active">Privacy Policy</a>
+                    <a href="#" class="hover:text-clawix-active">Terms of Service</a>
                 </div>
             </div>
         </div>

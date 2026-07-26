@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | AIBYML.SG</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        clawix: {
+                            bg: '#ecfefc',
+                            indigo: '#090eb3',
+                            accent: '#008be9',
+                            sky: '#4fc4f1',
+                            muted: '#93a7d7',
+                            cta: '#0054c2',
+                            teal: '#1574a4',
+                            purple: '#aa5eda',
+                            active: '#17cad2'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.4s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-slate-800 antialiased overflow-x-hidden">
+
+    <nav class="glass-nav fixed w-full z-50 top-0 border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center">
+                    <img src="assets/AIBYMLSG_primary_logo.png" alt="AIBYML SG Logo" class="h-10 w-auto mr-3">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Home</a>
+                    <a href="product.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Product</a>
+                    <a href="enterprise.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Enterprise</a>
+                    <a href="learn.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Learn</a>
+                    <a href="blog.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Insights</a>
+                    <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">About Us</a>
+                    <div class="flex items-center space-x-4 ml-4 border-l border-gray-200 pl-4">
+                        <a href="https://github.com/ClawixAI/clawix" target="_blank" class="text-sm font-medium text-clawix-indigo border border-clawix-indigo/30 hover:bg-clawix-bg px-4 py-2 rounded-lg transition-all">GitHub</a>
+                        <a href="enterprise.html" class="bg-clawix-cta hover:bg-clawix-indigo text-white px-5 py-2 rounded-lg text-sm font-medium transition-all shadow-md shadow-clawix-cta/20">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-clawix-indigo focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
+                <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Home</a>
+                <a href="product.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Product</a>
+                <a href="enterprise.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Enterprise</a>
+                <a href="learn.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Learn</a>
+                <a href="blog.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Insights</a>
+                <a href="about.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+<main class="pt-20">
+    <div class="bg-white pt-16">
+        <!-- Page Header -->
+        <div class="bg-gradient-to-b from-clawix-bg to-white pt-24 pb-16 overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-clawix-indigo mb-6">Privacy Policy</h1>
+                <p class="text-slate-500 text-sm">
+                    Effective date: 16 May 2026 &nbsp;•&nbsp; Last updated: 26 July 2026
+                </p>
+                <p class="text-slate-500 text-sm mt-1">AIBYML SG Pte Ltd (UEN: 202506386R) — aibyml.sg</p>
+            </div>
+        </div>
+
+        <!-- Policy Content -->
+        <div class="py-16 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-14">
+
+                    <!-- 1 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">1. Introduction</h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">AIBYML SG Pte Ltd (UEN: 202506386R) ("AIBYML", "Company", "we", "us", or "our") is committed to protecting the privacy of individuals and organisations that visit this website or use our services.</p>
+                        <p class="text-slate-600 leading-relaxed mb-4">This privacy policy explains how we handle personal data and confidential information in connection with your use of this website (www.aibyml.sg) and the services and technology products we provide from time to time. It sets out our obligations under the Personal Data Protection Act 2012 (PDPA) of Singapore (No. 26 of 2012) and its subsidiary legislation.</p>
+                        <p class="text-slate-600 leading-relaxed">It applies to personal data collected directly from you when you contact us, engage our services, or use any product, platform, application programming interface (API), or AI agent infrastructure that we make available.</p>
+                    </section>
+
+                    <!-- 2 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">2. Scope of This Policy</h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">This policy covers two broad categories of activity:</p>
+                        <ul class="space-y-3 mb-4">
+                            <li class="flex items-start text-slate-600"><span class="w-1.5 h-1.5 rounded-full bg-clawix-indigo mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Website activity.</strong> Information you provide when browsing this site or submitting an enquiry, request, or contact form.</span></li>
+                            <li class="flex items-start text-slate-600"><span class="w-1.5 h-1.5 rounded-full bg-clawix-indigo mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Service and product activity.</strong> Personal data and confidential information that we, or you, process through our AI consulting engagements, AI agent infrastructure, and any technology products or platforms we develop and make available, whether now or in the future.</span></li>
+                        </ul>
+                        <p class="text-slate-600 leading-relaxed">Where we act as a data intermediary processing personal data on behalf of a client under a separate services agreement, that agreement — together with this policy — governs how such data is handled.</p>
+                    </section>
+
+                    <!-- 3 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">3. Personal Data We May Collect</h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">We collect personal data that you voluntarily provide, and data reasonably necessary to deliver our services. This may include:</p>
+                        <ul class="space-y-2 mb-4 list-disc pl-5 text-slate-600">
+                            <li>Name, email address, and contact number</li>
+                            <li>Company or organisation name and role</li>
+                            <li>Account or login credentials, where you register for a product or platform</li>
+                            <li>Billing and transaction details, where you procure paid services</li>
+                            <li>Correspondence, enquiry content, and support requests</li>
+                            <li>Data you submit to, or generate through, our services, products, or AI agents in the course of an engagement</li>
+                            <li>Technical data strictly necessary to operate a product you use (e.g. logs required for security, reliability, and troubleshooting)</li>
+                        </ul>
+                        <p class="text-slate-600 leading-relaxed">We do not knowingly collect sensitive personal data (e.g. health data or national identification numbers) unless it is expressly required for a specific engagement and provided with appropriate consent and safeguards.</p>
+                    </section>
+
+                    <!-- 4 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">4. Confidential and Client Information</h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">Processing confidential and client information is a core part of how our services and products work. In the course of providing AI consulting, agent infrastructure, and technology products, we process confidential information — including business data, documents, datasets, prompts, and other content — that you or your organisation submit to, or generate through, our services ("Client Data").</p>
+                        <p class="text-slate-600 leading-relaxed mb-4">By engaging our services or using our products, you acknowledge that Client Data — which may include personal data relating to you, your personnel, or your own customers — will be processed by us and our sub-processors to deliver those services. Where the Client Data you provide contains personal data of third parties, you are responsible for ensuring you have the necessary consent or lawful basis to share it with us for that purpose.</p>
+                        <ul class="space-y-3 text-slate-600">
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-indigo mr-3 mt-2.5 shrink-0"></span><span>Client Data is processed only to provide, operate, maintain, secure, and support the services you have engaged us for, in accordance with your instructions and any applicable services agreement.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-indigo mr-3 mt-2.5 shrink-0"></span><span>We treat Client Data as confidential and apply access controls so that only authorised personnel and sub-processors may access it on a need-to-know basis.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-indigo mr-3 mt-2.5 shrink-0"></span><span>We do not use Client Data for any purpose unrelated to delivering the relevant service, and we do not sell or share it for advertising, without your consent.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-indigo mr-3 mt-2.5 shrink-0"></span><span>Where we act as a data intermediary processing Client Data on your behalf, the applicable services agreement governs the specific processing terms, and this policy applies to the extent not inconsistent with that agreement.</span></li>
+                        </ul>
+                    </section>
+
+                    <!-- 5 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">5. Use of Artificial Intelligence and Technology Products</h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">Our services and products use artificial intelligence, machine learning models, and third-party AI infrastructure to process data and generate outputs. Where this applies:</p>
+                        <ul class="space-y-3 text-slate-600">
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-active mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">No training on your data.</strong> We do not use your Client Data or personal data to train, fine-tune, or otherwise develop our own AI models or those of any third party. Your data is used only to generate the outputs and deliver the services you have engaged us for, and is not repurposed to improve models for us or for any other party.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-active mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Third-party AI providers.</strong> Some features rely on third-party model or cloud providers acting as our sub-processors. These providers are engaged under contractual terms requiring them to process data only on our instructions, to refrain from using it to train their own models, and to apply appropriate protection measures.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-active mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Outputs.</strong> AI-generated outputs may be inaccurate or incomplete. You remain responsible for reviewing outputs before relying on them, and we process the underlying data only as needed to generate those outputs.</span></li>
+                        </ul>
+                    </section>
+
+                    <!-- 6 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">6. Purposes for Which We Use Your Data</h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">We collect and use personal data and Client Data only for the purposes for which it was provided, which may include:</p>
+                        <ul class="space-y-2 list-disc pl-5 text-slate-600">
+                            <li>Responding to your enquiry or request for information</li>
+                            <li>Providing, operating, securing, and improving our services and products</li>
+                            <li>Communicating with you about engagements, updates, and support</li>
+                            <li>Managing accounts, billing, and contractual obligations</li>
+                            <li>Complying with applicable legal or regulatory obligations</li>
+                            <li>Record-keeping for legitimate business purposes</li>
+                        </ul>
+                    </section>
+
+                    <!-- 7 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">7. Legal Basis and Consent</h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">We collect and process personal data only after obtaining your consent — either expressly (e.g. when you submit a form or enter into an agreement) or by way of deemed consent where the purpose is reasonably apparent from the context of the collection — or on another lawful basis permitted under the PDPA.</p>
+                        <p class="text-slate-600 leading-relaxed">You may withdraw your consent at any time by contacting us using the details in Section 12. Withdrawal does not affect the lawfulness of processing carried out before the withdrawal. Where consent is withdrawn, we will cease processing your data for the relevant purpose unless we are required or entitled to retain it under applicable law or an existing agreement.</p>
+                    </section>
+
+                    <!-- 8 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">8. Disclosure and Sub-Processors</h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">We do not sell, rent, or licence your personal data to data brokers or advertising platforms. We disclose personal data only to:</p>
+                        <ul class="space-y-3 text-slate-600">
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-indigo mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Service providers and sub-processors.</strong> Third parties engaged to provide services on our behalf (e.g. cloud hosting, AI model providers, email hosting, IT support), who are contractually bound to process data only on our instructions and in line with applicable data protection laws.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-indigo mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Legal and regulatory authorities.</strong> Where required by law, court order, or a competent regulatory authority in Singapore or another applicable jurisdiction.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-indigo mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Professional advisers</strong> such as lawyers, auditors, and insurers in connection with their advisory services.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-indigo mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">A successor entity</strong> in the event of a merger, acquisition, or reorganisation, subject to this policy continuing to apply to your data.</span></li>
+                        </ul>
+                    </section>
+
+                    <!-- 9 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">9. International Transfers</h2>
+                        <p class="text-slate-600 leading-relaxed">Some of our service providers and AI infrastructure may store or process data outside Singapore. Where we transfer personal data overseas, we take reasonable steps to ensure the recipient provides a standard of protection comparable to the PDPA, including through contractual safeguards, consistent with the PDPA's obligations on overseas transfers.</p>
+                    </section>
+
+                    <!-- 10 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">10. Retention of Personal Data</h2>
+                        <p class="text-slate-600 leading-relaxed">We retain personal data and Client Data only for as long as necessary to fulfil the purpose for which it was collected, to provide the relevant service, or as required by law or contract. Once no longer needed, we make reasonable efforts to securely destroy or anonymise it. Specific retention periods for a given service may be set out in the applicable service agreement.</p>
+                    </section>
+
+                    <!-- 11 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">11. Protection of Personal Data</h2>
+                        <p class="text-slate-600 leading-relaxed">We implement appropriate administrative, physical, and technical security measures — including access controls, encryption where appropriate, and sub-processor obligations — to protect data in our possession or under our control from unauthorised access, use, disclosure, copying, modification, or disposal. While we take reasonable precautions, no method of transmission or storage is completely secure and we cannot guarantee absolute security.</p>
+                    </section>
+
+                    <!-- 12 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">12. Your Rights Under the PDPA</h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">Under the Personal Data Protection Act 2012 (Singapore), you have the following rights in respect of personal data we hold about you:</p>
+                        <ul class="space-y-3 mb-4 text-slate-600">
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-cta mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Right of access.</strong> Request a copy of personal data we hold about you, and information on how it has been used or disclosed within a year before the request.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-cta mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Right of correction.</strong> Request that we correct an error or omission in your personal data as soon as practicable.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-cta mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Right of withdrawal.</strong> Withdraw consent to the collection, use, or disclosure of your personal data at any time, subject to legal or contractual restrictions.</span></li>
+                            <li class="flex items-start"><span class="w-1.5 h-1.5 rounded-full bg-clawix-cta mr-3 mt-2.5 shrink-0"></span><span><strong class="text-slate-800">Right to data portability.</strong> Request your personal data in a commonly used machine-readable format where technically feasible (where applicable under Part VIA of the PDPA).</span></li>
+                        </ul>
+                        <p class="text-slate-600 leading-relaxed">To exercise any of these rights, please contact our Data Protection Officer using the details below. We will respond within 30 calendar days or such other period as may be prescribed by the PDPA.</p>
+                    </section>
+
+                    <!-- 13 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">13. Data Protection Officer</h2>
+                        <p class="text-slate-600 leading-relaxed mb-6">In accordance with section 11 of the PDPA, we have appointed a Data Protection Officer (DPO) responsible for ensuring our compliance with the PDPA.</p>
+                        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+                            <p class="font-bold text-slate-800 mb-3">Ian Ng, Data Protection Officer</p>
+                            <p class="text-slate-600 text-sm mb-1"><span class="font-medium text-slate-700">Address:</span> 60 Paya Lebar Road, #08-45A, Paya Lebar Square, Singapore 409051</p>
+                            <p class="text-slate-600 text-sm"><span class="font-medium text-slate-700">Email:</span> <a href="mailto:ian.ng@aibyml.sg" class="text-clawix-cta hover:text-clawix-indigo">ian.ng@aibyml.sg</a></p>
+                        </div>
+                    </section>
+
+                    <!-- 14 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">14. Third-Party Links</h2>
+                        <p class="text-slate-600 leading-relaxed">This website and our products may contain links to third-party websites or services. We have no control over the content or privacy practices of those sites and are not responsible for their policies. We encourage you to review the privacy policy of any third-party site or service you use.</p>
+                    </section>
+
+                    <!-- 15 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">15. Changes to This Policy</h2>
+                        <p class="text-slate-600 leading-relaxed">We may revise this privacy policy from time to time to reflect changes in law, our practices, or the nature of our website, services, and products. Updates will be posted on this page with a revised effective date. We encourage you to review this page periodically. Continued use of this website, services, or products after any change constitutes acceptance of the revised policy.</p>
+                    </section>
+
+                    <!-- 16 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">16. Governing Law and Jurisdiction</h2>
+                        <p class="text-slate-600 leading-relaxed">This privacy policy is governed by the laws of Singapore. Any disputes arising in connection with this policy shall be subject to the non-exclusive jurisdiction of the courts of Singapore.</p>
+                    </section>
+
+                    <!-- 17 -->
+                    <section>
+                        <h2 class="text-2xl font-bold text-clawix-indigo mb-4">17. Contact Us</h2>
+                        <p class="text-slate-600 leading-relaxed">If you have any questions, concerns, or feedback about this privacy policy or how we handle your data, please contact our Data Protection Officer at the details set out in Section 13 above. You may also lodge a complaint with the Personal Data Protection Commission (PDPC) of Singapore at <a href="https://www.pdpc.gov.sg" target="_blank" class="text-clawix-cta hover:text-clawix-indigo">www.pdpc.gov.sg</a>.</p>
+                    </section>
+
+                </div>
+
+                <!-- Disclaimer -->
+                <div class="mt-16 pt-8 border-t border-gray-200 text-center">
+                    <p class="text-xs text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                        &copy; 2026 AIBYML SG Pte Ltd. All rights reserved. This policy is intended to align with the Personal Data Protection Act 2012 (Singapore). It is a template and should be reviewed by qualified legal counsel before publication.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="font-bold text-slate-800 mb-4">AIBYML.SG</h4>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-800 mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="index.html" class="hover:text-clawix-indigo">Home</a></li>
+                        <li><a href="product.html" class="hover:text-clawix-indigo">Product</a></li>
+                        <li><a href="enterprise.html" class="hover:text-clawix-indigo">Enterprise</a></li>
+                        <li><a href="learn.html" class="hover:text-clawix-indigo">Learn</a></li>
+                        <li><a href="blog.html" class="hover:text-clawix-indigo">Insights</a></li>
+                        <li><a href="about.html" class="hover:text-clawix-indigo">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 pt-8 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2026 AIBYML.SG. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="privacy.html" class="hover:text-clawix-indigo">Privacy Policy</a>
+                    <a href="#" class="hover:text-clawix-indigo">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

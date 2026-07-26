@@ -58,7 +58,7 @@
                     <a href="product.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Product</a>
                     <a href="enterprise.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Enterprise</a>
                     <a href="learn.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Learn</a>
-                    <a href="blog.html" class="nav-link text-sm font-medium text-clawix-indigo font-bold hover:text-clawix-indigo transition-colors">Blog</a>
+                    <a href="blog.html" class="nav-link text-sm font-medium text-clawix-indigo font-bold hover:text-clawix-indigo transition-colors">Insights</a>
                     <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">About Us</a>
                     <div class="flex items-center space-x-4 ml-4 border-l border-gray-200 pl-4">
                         <a href="https://github.com/ClawixAI/clawix" target="_blank" class="text-sm font-medium text-clawix-indigo border border-clawix-indigo/30 hover:bg-clawix-bg px-4 py-2 rounded-lg transition-all">GitHub</a>
@@ -84,7 +84,7 @@
                 <a href="product.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Product</a>
                 <a href="enterprise.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Enterprise</a>
                 <a href="learn.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Learn</a>
-                <a href="blog.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-indigo font-bold hover:bg-clawix-bg hover:text-clawix-indigo">Blog</a>
+                <a href="blog.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-indigo font-bold hover:bg-clawix-bg hover:text-clawix-indigo">Insights</a>
                 <a href="about.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">About Us</a>
             </div>
         </div>
@@ -93,26 +93,133 @@
 <main class="pt-20">
     <div class="pt-16">
             <div class="bg-gradient-to-b from-clawix-bg to-white py-20">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-clawix-indigo mb-6">Insights & Updates</h2>
-                    <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-16">Follow AIBYML.SG for the latest articles on AI agent development, multi-agent orchestration, and production deployment.</p>
-                    
-                    <!-- LinkedIn Embed Container -->
-                    <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-4 max-w-4xl mx-auto overflow-hidden">
-                        <!-- Standard script embed for LinkedIn Company Pages -->
-                        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-                        <div class="badge-base LI-profile-badge mx-auto flex justify-center" data-locale="en_US" data-size="large" data-theme="light" data-type="COMPANY" data-vanity="aibyml-sg" data-version="v1">
-                            <a class="badge-base__link LI-simple-link" href="https://sg.linkedin.com/company/aibyml-sg?trk=profile-badge">AIBYML SG</a>
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <p class="text-sm font-bold text-clawix-cta uppercase tracking-widest mb-4">Insights & Updates</p>
+                        <h2 class="text-4xl md:text-5xl font-bold text-clawix-indigo mb-6 tracking-tight">Insights & Updates</h2>
+                        <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">Follow AIBYML.SG for the latest articles on AI agent development, multi-agent orchestration, and production deployment.</p>
+
+                        <!-- Topic Tags -->
+                        <div class="flex flex-wrap justify-center gap-3 mb-16">
+                            <span class="px-4 py-1.5 rounded-full bg-clawix-bg text-clawix-indigo text-sm font-medium border border-clawix-indigo/10">AI agents</span>
+                            <span class="px-4 py-1.5 rounded-full bg-clawix-bg text-clawix-indigo text-sm font-medium border border-clawix-indigo/10">Orchestration</span>
+                            <span class="px-4 py-1.5 rounded-full bg-clawix-bg text-clawix-indigo text-sm font-medium border border-clawix-indigo/10">Deployment</span>
                         </div>
-                        <p class="text-sm text-slate-500 mt-6 mb-2">Connect with us on LinkedIn for daily updates.</p>
-                        <a href="https://www.linkedin.com/company/aibyml-sg" target="_blank" class="text-clawix-cta font-medium hover:underline">View full page →</a>
                     </div>
 
-                    <!-- Elfsight LinkedIn Feed -->
-                    <div class="mt-16 max-w-4xl mx-auto">
-                        <!-- Elfsight LinkedIn Feed | Untitled LinkedIn Feed -->
-                        <script src="https://elfsightcdn.com/platform.js" async></script>
-                        <div class="elfsight-app-bf2c393d-84ec-47d9-a07a-9b9eb5ea9b63" data-elfsight-app-lazy></div>
+                    <!-- Two-column layout: fixed-width LinkedIn feed + flexible articles -->
+                    <div class="flex flex-col lg:flex-row items-start gap-10">
+
+                        <!-- LinkedIn Column: FIXED width, never stretches/shrinks, sticky on desktop -->
+                        <div class="w-[360px] shrink-0 mx-auto lg:mx-0 lg:sticky lg:top-28">
+                            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 overflow-hidden text-left">
+                                <div class="flex items-center gap-2 mb-6">
+                                    <span class="w-8 h-8 rounded-lg bg-clawix-cta/10 text-clawix-cta flex items-center justify-center shrink-0">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                                    </span>
+                                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Latest from LinkedIn</span>
+                                </div>
+
+                                <div class="text-center pb-6 mb-6 border-b border-gray-100">
+                                    <!-- Standard script embed for LinkedIn Company Pages -->
+                                    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+                                    <div class="badge-base LI-profile-badge mx-auto flex justify-center" data-locale="en_US" data-size="large" data-theme="light" data-type="COMPANY" data-vanity="aibyml-sg" data-version="v1">
+                                        <a class="badge-base__link LI-simple-link" href="https://sg.linkedin.com/company/aibyml-sg?trk=profile-badge">AIBYML SG</a>
+                                    </div>
+                                    <p class="text-sm text-slate-500 mt-6 mb-2">Connect with us on LinkedIn for daily updates.</p>
+                                    <a href="https://www.linkedin.com/company/aibyml-sg" target="_blank" class="text-clawix-cta font-medium hover:underline">View full page →</a>
+                                </div>
+
+                                <!-- Elfsight LinkedIn Feed | Untitled LinkedIn Feed -->
+                                <script src="https://elfsightcdn.com/platform.js" async></script>
+                                <div class="elfsight-app-bf2c393d-84ec-47d9-a07a-9b9eb5ea9b63" data-elfsight-app-lazy></div>
+                            </div>
+
+                            <!-- Follow CTA -->
+                            <div class="mt-6">
+                                <a href="https://www.linkedin.com/company/aibyml-sg" target="_blank" class="inline-flex items-center justify-center w-full bg-clawix-cta hover:bg-clawix-indigo text-white px-6 py-3 rounded-xl font-medium transition-all shadow-lg shadow-clawix-cta/30">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                                    Follow us on LinkedIn
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Featured Articles Column: FLEXIBLE, fills remaining space -->
+                        <div class="w-full flex-1 min-w-0 text-left">
+                            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-6">Featured articles</h3>
+
+                            <!-- Featured Article (full-width) -->
+                            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 mb-6 hover:shadow-md transition-shadow">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="px-3 py-1 rounded-full bg-red-50 text-red-600 text-xs font-bold uppercase tracking-wide">e27</span>
+                                    <span class="text-sm text-slate-400">13 May 2026</span>
+                                </div>
+                                <h4 class="text-2xl font-bold text-slate-800 mb-3">As AI agents gain autonomy, liability is posing immediate business risk?</h4>
+                                <p class="text-slate-600 mb-5 leading-relaxed">AI is forcing companies to treat accountability, governance, and system ownership as operational priorities.</p>
+                                <a href="https://e27.co/as-ai-agents-gain-autonomy-liability-is-shifting-from-theory-to-immediate-business-risk-20260509/" target="_blank" rel="noopener" class="inline-flex items-center text-clawix-cta font-medium hover:text-clawix-indigo">
+                                    Read on e27
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                </a>
+                            </div>
+
+                            <!-- Article Cards Grid -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+
+                                <!-- ARTICLE CARD: copy this block to add a new article -->
+                                <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition-shadow flex flex-col">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="px-3 py-1 rounded-full bg-clawix-cta/10 text-clawix-cta text-xs font-bold uppercase tracking-wide">Newsletter</span>
+                                        <span class="text-sm text-slate-400">4 May 2026</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-slate-800 mb-2">If AI agents are so powerful, why don’t they work like teams?</h4>
+                                    <p class="text-slate-600 text-sm mb-4 flex-grow">AI capability is scaling fast. Coordination isn’t — and that’s the real bottleneck.</p>
+                                    <a href="https://www.linkedin.com/pulse/ai-agents-so-powerful-why-dont-work-like-teams-ian-yee-yuan-ng-dtwjc/" target="_blank" rel="noopener" class="inline-flex items-center text-clawix-cta text-sm font-medium hover:text-clawix-indigo">
+                                        Read on LinkedIn
+                                        <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    </a>
+                                </div>
+                                <!-- /ARTICLE CARD -->
+
+                                <!-- ARTICLE CARD: copy this block to add a new article -->
+                                <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition-shadow flex flex-col">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="px-3 py-1 rounded-full bg-red-50 text-red-600 text-xs font-bold uppercase tracking-wide">e27</span>
+                                        <span class="text-sm text-slate-400">1 May 2026</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-slate-800 mb-2">Southeast Asia’s AI agent opening is in messy workflows</h4>
+                                    <p class="text-slate-600 text-sm mb-4 flex-grow">Southeast Asia’s AI opportunity lies in agents that reduce fraud, backlogs, and operational friction in key industries.</p>
+                                    <a href="https://e27.co/southeast-asias-ai-agent-opening-is-in-messy-workflows-20260428/" target="_blank" rel="noopener" class="inline-flex items-center text-clawix-cta text-sm font-medium hover:text-clawix-indigo">
+                                        Read on e27
+                                        <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    </a>
+                                </div>
+                                <!-- /ARTICLE CARD -->
+
+                                <!-- ARTICLE CARD: copy this block to add a new article -->
+                                <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition-shadow flex flex-col">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="px-3 py-1 rounded-full bg-clawix-cta/10 text-clawix-cta text-xs font-bold uppercase tracking-wide">Newsletter</span>
+                                        <span class="text-sm text-slate-400">24 April 2026</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-slate-800 mb-2">AI accountability is becoming the next big battleground</h4>
+                                    <p class="text-slate-600 text-sm mb-4 flex-grow">An AI agent is deployed to handle financial approvals. Then one day, it approves a fraudulent transaction. The real problem is figuring out who is responsible.</p>
+                                    <a href="https://www.linkedin.com/pulse/ai-accountability-becoming-next-big-battleground-ian-yee-yuan-ng-dytgc/" target="_blank" rel="noopener" class="inline-flex items-center text-clawix-cta text-sm font-medium hover:text-clawix-indigo">
+                                        Read on LinkedIn
+                                        <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    </a>
+                                </div>
+                                <!-- /ARTICLE CARD -->
+
+                            </div>
+
+                            <div class="text-center sm:text-left">
+                                <a href="#" class="inline-flex items-center text-clawix-indigo font-bold hover:text-clawix-cta">
+                                    View all articles
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -132,7 +239,7 @@
                         <li><a href="product.html" class="hover:text-clawix-indigo">Product</a></li>
                         <li><a href="enterprise.html" class="hover:text-clawix-indigo">Enterprise</a></li>
                         <li><a href="learn.html" class="hover:text-clawix-indigo">Learn</a></li>
-                        <li><a href="blog.html" class="hover:text-clawix-indigo">Blog</a></li>
+                        <li><a href="blog.html" class="hover:text-clawix-indigo">Insights</a></li>
                         <li><a href="about.html" class="hover:text-clawix-indigo">About Us</a></li>
                     </ul>
                 </div>
@@ -140,7 +247,7 @@
             <div class="border-t border-gray-100 pt-8 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
                 <p>&copy; 2026 AIBYML.SG. All rights reserved.</p>
                 <div class="mt-4 md:mt-0 space-x-4">
-                    <a href="#" class="hover:text-clawix-indigo">Privacy Policy</a>
+                    <a href="privacy.html" class="hover:text-clawix-indigo">Privacy Policy</a>
                     <a href="#" class="hover:text-clawix-indigo">Terms of Service</a>
                 </div>
             </div>
