@@ -23,7 +23,8 @@
                             cta: '#0054c2',
                             teal: '#1574a4',
                             purple: '#aa5eda',
-                            active: '#17cad2'
+                            active: '#17cad2',
+                            deep: '#060a1f'
                         }
                     },
                     animation: {
@@ -42,33 +43,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="text-slate-800 antialiased overflow-x-hidden">
+<body class="bg-clawix-deep text-clawix-muted antialiased overflow-x-hidden">
 
-    <nav class="glass-nav fixed w-full z-50 top-0 border-b border-gray-100 transition-all duration-300">
+    <nav class="fixed w-full z-50 top-0 bg-clawix-deep/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex-shrink-0 flex items-center">
-                    <img src="assets/AIBYMLSG_primary_logo.png" alt="AIBYML SG Logo" class="h-10 w-auto mr-3">
+                    <img src="assets/aibyml_sg_icon_background.png" alt="AIBYML SG Logo" class="h-14 w-14 rounded-lg mr-3">
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Home</a>
-                    <a href="product.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Product</a>
-                    <a href="enterprise.html" class="nav-link text-sm font-medium text-clawix-indigo font-bold hover:text-clawix-indigo transition-colors">Enterprise</a>
-                    <a href="learn.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Learn</a>
-                    <a href="blog.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Insights</a>
-                    <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">About Us</a>
-                    <div class="flex items-center space-x-4 ml-4 border-l border-gray-200 pl-4">
-                        <a href="https://github.com/ClawixAI/clawix" target="_blank" class="text-sm font-medium text-clawix-indigo border border-clawix-indigo/30 hover:bg-clawix-bg px-4 py-2 rounded-lg transition-all">GitHub</a>
-                        <a href="enterprise.html" class="bg-clawix-cta hover:bg-clawix-indigo text-white px-5 py-2 rounded-lg text-sm font-medium transition-all shadow-md shadow-clawix-cta/20">Get Started</a>
+                    <a href="index.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Home</a>
+                    <a href="product.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Product</a>
+                    <a href="enterprise.html" class="nav-link text-sm font-medium text-white font-bold hover:text-clawix-active transition-colors">Enterprise</a>
+                    <a href="learn.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Learn</a>
+                    <a href="insights.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Insights</a>
+                    <a href="about.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">About Us</a>
+                    <div class="flex items-center space-x-4 ml-4 border-l border-white/10 pl-4">
+                        <a href="https://github.com/ClawixAI/clawix" target="_blank" class="text-sm font-medium text-clawix-muted border border-white/20 hover:bg-white/5 hover:text-white px-4 py-2 rounded-lg transition-all">GitHub</a>
+                        <a href="enterprise.html" class="bg-clawix-active hover:opacity-90 text-clawix-deep px-5 py-2 rounded-lg text-sm font-medium transition-all">Get Started</a>
                     </div>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-clawix-indigo focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-clawix-muted hover:text-clawix-active focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -78,119 +79,119 @@
         </div>
 
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full">
+        <div id="mobile-menu" class="hidden md:hidden bg-clawix-deep border-b border-white/10 absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
-                <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Home</a>
-                <a href="product.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Product</a>
-                <a href="enterprise.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-indigo font-bold hover:bg-clawix-bg hover:text-clawix-indigo">Enterprise</a>
-                <a href="learn.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Learn</a>
-                <a href="blog.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Insights</a>
-                <a href="about.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">About Us</a>
+                <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Home</a>
+                <a href="product.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Product</a>
+                <a href="enterprise.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white font-bold hover:bg-white/5 hover:text-clawix-active">Enterprise</a>
+                <a href="learn.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Learn</a>
+                <a href="insights.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Insights</a>
+                <a href="about.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">About Us</a>
             </div>
         </div>
     </nav>
 
 <main class="pt-20">
     <div class="pt-16">
-        <div class="bg-gradient-to-br from-clawix-bg to-white py-20 border-b border-gray-100">
+        <div class="bg-clawix-deep py-20 border-b border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div class="inline-block px-4 py-1 rounded-full bg-indigo-50 text-clawix-indigo text-sm font-bold mb-4">AIBYML.SG Enterprise</div>
-                <h2 class="text-4xl md:text-5xl font-bold text-clawix-indigo mb-6">Governed Growth for Private & Public Sectors</h2>
-                <p class="text-xl text-slate-600 max-w-3xl mx-auto">Transformation you can trust, backed by regional compliance (PDPA) and strict operational governance.</p>
+                <div class="inline-block px-4 py-1 rounded-full bg-white/5 text-clawix-active text-sm font-bold mb-4 border border-white/10">AIBYML.SG Enterprise</div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Governed Growth for Private & Public Sectors</h2>
+                <p class="text-xl text-clawix-muted max-w-3xl mx-auto">Transformation you can trust, backed by regional compliance (PDPA) and strict operational governance.</p>
             </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center p-8 border border-gray-100 rounded-2xl bg-white shadow-sm hover:border-clawix-indigo transition-colors">
-                    <div class="mx-auto w-16 h-16 bg-blue-50 text-clawix-cta rounded-full flex items-center justify-center mb-6">
+                <div class="text-center p-8 border border-white/10 rounded-2xl bg-white/5 hover:border-clawix-indigo transition-colors">
+                    <div class="mx-auto w-16 h-16 bg-clawix-cta/10 text-clawix-cta rounded-full flex items-center justify-center mb-6">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Operations</h3>
-                    <p class="text-slate-600">Streamline workflows and slash costs with AI-enabled automation tailored to your unique business procedures.</p>
+                    <h3 class="text-2xl font-bold text-white mb-4">Operations</h3>
+                    <p class="text-clawix-muted">Streamline workflows and slash costs with AI-enabled automation tailored to your unique business procedures.</p>
                 </div>
 
-                <div class="text-center p-8 border border-gray-100 rounded-2xl bg-white shadow-sm hover:border-clawix-active transition-colors">
-                    <div class="mx-auto w-16 h-16 bg-teal-50 text-clawix-active rounded-full flex items-center justify-center mb-6">
+                <div class="text-center p-8 border border-white/10 rounded-2xl bg-white/5 hover:border-clawix-active transition-colors">
+                    <div class="mx-auto w-16 h-16 bg-clawix-active/10 text-clawix-active rounded-full flex items-center justify-center mb-6">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Decision Support</h3>
-                    <p class="text-slate-600">Empower your team with real-time, AI-driven insights for faster, sharper, and more informed strategic choices.</p>
+                    <h3 class="text-2xl font-bold text-white mb-4">Decision Support</h3>
+                    <p class="text-clawix-muted">Empower your team with real-time, AI-driven insights for faster, sharper, and more informed strategic choices.</p>
                 </div>
 
-                <div class="text-center p-8 border border-gray-100 rounded-2xl bg-white shadow-sm hover:border-clawix-sky transition-colors">
-                    <div class="mx-auto w-16 h-16 bg-sky-50 text-clawix-sky rounded-full flex items-center justify-center mb-6">
+                <div class="text-center p-8 border border-white/10 rounded-2xl bg-white/5 hover:border-clawix-sky transition-colors">
+                    <div class="mx-auto w-16 h-16 bg-clawix-sky/10 text-clawix-sky rounded-full flex items-center justify-center mb-6">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Customer Engagement</h3>
-                    <p class="text-slate-600">Transform generic interactions into brand loyalty through highly personalized, intelligent conversational tools.</p>
+                    <h3 class="text-2xl font-bold text-white mb-4">Customer Engagement</h3>
+                    <p class="text-clawix-muted">Transform generic interactions into brand loyalty through highly personalized, intelligent conversational tools.</p>
                 </div>
             </div>
         </div>
 
         <!-- 4 Pillars of Trust -->
-        <div class="bg-slate-50 py-20 border-t border-b border-gray-100">
+        <div class="bg-clawix-deep py-20 border-t border-b border-white/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h3 class="text-3xl font-bold text-clawix-indigo mb-4">The 4 Pillars of Trust</h3>
-                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">We deploy AI with a strict, multi-layered governance framework to ensure maximum security and compliance.</p>
+                    <h3 class="text-3xl font-bold text-white mb-4">The 4 Pillars of Trust</h3>
+                    <p class="text-lg text-clawix-muted max-w-3xl mx-auto">We deploy AI with a strict, multi-layered governance framework to ensure maximum security and compliance.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
                         <div class="text-clawix-cta font-bold text-xl mb-3">01. Legal</div>
-                        <h4 class="font-bold text-slate-800 mb-2">Contracts & Compliance</h4>
-                        <p class="text-sm text-slate-600">Compliance-first contracts mapped strictly to PDPA, GDPR, and the incoming EU AI Act.</p>
+                        <h4 class="font-bold text-white mb-2">Contracts & Compliance</h4>
+                        <p class="text-sm text-clawix-muted">Compliance-first contracts mapped strictly to PDPA, GDPR, and the incoming EU AI Act.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
                         <div class="text-clawix-active font-bold text-xl mb-3">02. Technical</div>
-                        <h4 class="font-bold text-slate-800 mb-2">Secure Quality Gates</h4>
-                        <p class="text-sm text-slate-600">Containerized isolation, RBAC, and immutable audit logs built into the core infrastructure.</p>
+                        <h4 class="font-bold text-white mb-2">Secure Quality Gates</h4>
+                        <p class="text-sm text-clawix-muted">Containerized isolation, RBAC, and immutable audit logs built into the core infrastructure.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
                         <div class="text-clawix-purple font-bold text-xl mb-3">03. Operational</div>
-                        <h4 class="font-bold text-slate-800 mb-2">Human-in-the-Loop</h4>
-                        <p class="text-sm text-slate-600">Accountable review gates ensuring high-stakes AI decisions always require human approval.</p>
+                        <h4 class="font-bold text-white mb-2">Human-in-the-Loop</h4>
+                        <p class="text-sm text-clawix-muted">Accountable review gates ensuring high-stakes AI decisions always require human approval.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
                         <div class="text-clawix-sky font-bold text-xl mb-3">04. Policy</div>
-                        <h4 class="font-bold text-slate-800 mb-2">Ethical Usage</h4>
-                        <p class="text-sm text-slate-600">Guided by a Responsible AI Charter that aligns system behavior with your corporate values.</p>
+                        <h4 class="font-bold text-white mb-2">Ethical Usage</h4>
+                        <p class="text-sm text-clawix-muted">Guided by a Responsible AI Charter that aligns system behavior with your corporate values.</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-            <a href="mailto:askus@aibyml.sg" class="inline-flex items-center bg-clawix-indigo hover:bg-blue-900 text-white px-8 py-4 rounded-xl text-lg font-medium transition-all shadow-lg">
+            <a href="mailto:askus@aibyml.sg" class="inline-flex items-center bg-clawix-active hover:opacity-90 text-clawix-deep px-8 py-4 rounded-xl text-lg font-medium transition-all">
                 Contact Sales & Consulting
             </a>
         </div>
     </div>
 </main>
 
-    <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+    <footer class="bg-clawix-deep border-t border-white/10 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
                 <div class="col-span-2 md:col-span-1">
-                    <h4 class="font-bold text-slate-800 mb-4">AIBYML.SG</h4>
+                    <h4 class="font-bold text-white mb-4">AIBYML.SG</h4>
                 </div>
                 <div>
-                    <h4 class="font-bold text-slate-800 mb-4">Navigation</h4>
-                    <ul class="space-y-2 text-sm text-slate-500">
-                        <li><a href="index.html" class="hover:text-clawix-indigo">Home</a></li>
-                        <li><a href="product.html" class="hover:text-clawix-indigo">Product</a></li>
-                        <li><a href="enterprise.html" class="hover:text-clawix-indigo">Enterprise</a></li>
-                        <li><a href="learn.html" class="hover:text-clawix-indigo">Learn</a></li>
-                        <li><a href="blog.html" class="hover:text-clawix-indigo">Insights</a></li>
-                        <li><a href="about.html" class="hover:text-clawix-indigo">About Us</a></li>
+                    <h4 class="font-bold text-white mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-clawix-muted">
+                        <li><a href="index.html" class="hover:text-clawix-active">Home</a></li>
+                        <li><a href="product.html" class="hover:text-clawix-active">Product</a></li>
+                        <li><a href="enterprise.html" class="hover:text-clawix-active">Enterprise</a></li>
+                        <li><a href="learn.html" class="hover:text-clawix-active">Learn</a></li>
+                        <li><a href="insights.html" class="hover:text-clawix-active">Insights</a></li>
+                        <li><a href="about.html" class="hover:text-clawix-active">About Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-100 pt-8 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-clawix-muted flex flex-col md:flex-row justify-between items-center">
                 <p>&copy; 2026 AIBYML.SG. All rights reserved.</p>
                 <div class="mt-4 md:mt-0 space-x-4">
-                    <a href="privacy.html" class="hover:text-clawix-indigo">Privacy Policy</a>
-                    <a href="#" class="hover:text-clawix-indigo">Terms of Service</a>
+                    <a href="privacy.html" class="hover:text-clawix-active">Privacy Policy</a>
+                    <a href="#" class="hover:text-clawix-active">Terms of Service</a>
                 </div>
             </div>
         </div>

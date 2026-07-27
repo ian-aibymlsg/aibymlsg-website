@@ -23,7 +23,8 @@
                             cta: '#0054c2',
                             teal: '#1574a4',
                             purple: '#aa5eda',
-                            active: '#17cad2'
+                            active: '#17cad2',
+                            deep: '#060a1f'
                         }
                     },
                     animation: {
@@ -42,33 +43,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="text-slate-800 antialiased overflow-x-hidden">
+<body class="bg-clawix-deep text-clawix-muted antialiased overflow-x-hidden">
 
-    <nav class="glass-nav fixed w-full z-50 top-0 border-b border-gray-100 transition-all duration-300">
+    <nav class="fixed w-full z-50 top-0 bg-clawix-deep/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex-shrink-0 flex items-center">
-                    <img src="assets/AIBYMLSG_primary_logo.png" alt="AIBYML SG Logo" class="h-10 w-auto mr-3">
+                    <img src="assets/aibyml_sg_icon_background.png" alt="AIBYML SG Logo" class="h-14 w-14 rounded-lg mr-3">
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Home</a>
-                    <a href="product.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Product</a>
-                    <a href="enterprise.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Enterprise</a>
-                    <a href="learn.html" class="nav-link text-sm font-medium text-clawix-indigo font-bold hover:text-clawix-indigo transition-colors">Learn</a>
-                    <a href="blog.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">Insights</a>
-                    <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-clawix-indigo transition-colors">About Us</a>
-                    <div class="flex items-center space-x-4 ml-4 border-l border-gray-200 pl-4">
-                        <a href="https://github.com/ClawixAI/clawix" target="_blank" class="text-sm font-medium text-clawix-indigo border border-clawix-indigo/30 hover:bg-clawix-bg px-4 py-2 rounded-lg transition-all">GitHub</a>
-                        <a href="enterprise.html" class="bg-clawix-cta hover:bg-clawix-indigo text-white px-5 py-2 rounded-lg text-sm font-medium transition-all shadow-md shadow-clawix-cta/20">Get Started</a>
+                    <a href="index.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Home</a>
+                    <a href="product.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Product</a>
+                    <a href="enterprise.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Enterprise</a>
+                    <a href="learn.html" class="nav-link text-sm font-medium text-white font-bold hover:text-clawix-active transition-colors">Learn</a>
+                    <a href="insights.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">Insights</a>
+                    <a href="about.html" class="nav-link text-sm font-medium text-clawix-muted hover:text-clawix-active transition-colors">About Us</a>
+                    <div class="flex items-center space-x-4 ml-4 border-l border-white/10 pl-4">
+                        <a href="https://github.com/ClawixAI/clawix" target="_blank" class="text-sm font-medium text-clawix-muted border border-white/20 hover:bg-white/5 hover:text-white px-4 py-2 rounded-lg transition-all">GitHub</a>
+                        <a href="enterprise.html" class="bg-clawix-active hover:opacity-90 text-clawix-deep px-5 py-2 rounded-lg text-sm font-medium transition-all">Get Started</a>
                     </div>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-clawix-indigo focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-clawix-muted hover:text-clawix-active focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -78,99 +79,1114 @@
         </div>
 
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full">
+        <div id="mobile-menu" class="hidden md:hidden bg-clawix-deep border-b border-white/10 absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
-                <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Home</a>
-                <a href="product.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Product</a>
-                <a href="enterprise.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Enterprise</a>
-                <a href="learn.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-indigo font-bold hover:bg-clawix-bg hover:text-clawix-indigo">Learn</a>
-                <a href="blog.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">Insights</a>
-                <a href="about.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-clawix-bg hover:text-clawix-indigo">About Us</a>
+                <a href="index.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Home</a>
+                <a href="product.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Product</a>
+                <a href="enterprise.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Enterprise</a>
+                <a href="learn.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white font-bold hover:bg-white/5 hover:text-clawix-active">Learn</a>
+                <a href="insights.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">Insights</a>
+                <a href="about.html" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-clawix-muted hover:bg-white/5 hover:text-clawix-active">About Us</a>
             </div>
         </div>
     </nav>
 
 <main class="pt-20">
-    <div class="bg-slate-50 pt-16">
-            <div class="bg-clawix-bg py-20">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-clawix-indigo mb-6">Learn to Build with Clawix</h2>
-                    <p class="text-xl text-slate-600 max-w-3xl mx-auto">From beginner to advanced — resources and local Singapore events to help you master AI agent orchestration.</p>
-                </div>
-            </div>
 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    <div class="bg-white border-2 border-clawix-accent rounded-2xl p-8 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Beginner Workshop</h3>
-                            <span class="bg-blue-100 text-clawix-cta text-xs font-bold px-3 py-1 rounded-full">In-Person (SG)</span>
-                        </div>
-                        <p class="text-slate-600 mb-6">Get started with your first containerized agent in under an hour. Perfect for developers new to orchestration.</p>
-                        <div class="flex items-center text-sm text-slate-500 font-medium">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            2 hours
-                        </div>
-                    </div>
-
-                    <div class="bg-white border-2 border-clawix-purple rounded-2xl p-8 hover:shadow-lg transition-shadow">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-2xl font-bold text-slate-800">Advanced Bootcamp</h3>
-                            <span class="bg-purple-100 text-clawix-purple text-xs font-bold px-3 py-1 rounded-full">Virtual</span>
-                        </div>
-                        <p class="text-slate-600 mb-6">Master multi-agent DAG workflows, custom skills creation, and production deployments on private clouds.</p>
-                        <div class="flex items-center text-sm text-slate-500 font-medium">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            4 hours
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="text-3xl font-bold text-center text-slate-800 mb-10">Documentation & Resources</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                    <a href="https://github.com/ClawixAI/clawix" target="_blank" class="block bg-white p-6 rounded-xl border border-gray-200 hover:border-clawix-accent transition-colors">
-                        <svg class="w-8 h-8 mx-auto text-clawix-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                        <h4 class="font-bold text-lg text-slate-800 mb-1">Code Examples</h4>
-                        <p class="text-sm text-slate-500">20+ samples in Repo</p>
-                    </a>
-                    <a href="#" class="block bg-white p-6 rounded-xl border border-gray-200 hover:border-clawix-accent transition-colors">
-                        <svg class="w-8 h-8 mx-auto text-clawix-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
-                        <h4 class="font-bold text-lg text-slate-800 mb-1">Architecture</h4>
-                        <p class="text-sm text-slate-500">System Design Guides</p>
-                    </a>
-                    <a href="#" class="block bg-white p-6 rounded-xl border border-gray-200 hover:border-clawix-accent transition-colors">
-                        <svg class="w-8 h-8 mx-auto text-clawix-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                        <h4 class="font-bold text-lg text-slate-800 mb-1">Video Tutorials</h4>
-                        <p class="text-sm text-slate-500">Coming Soon</p>
-                    </a>
-                </div>
-            </div>
+    <!-- ============================================ -->
+    <!-- 1. PAGE HEADER -->
+    <!-- ============================================ -->
+    <div class="bg-clawix-deep pt-24 pb-16 lg:pt-28 lg:pb-20 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm font-semibold text-clawix-active uppercase tracking-widest mb-4">Learn</p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Learn to Build with Clawix</h1>
+            <p class="text-xl text-clawix-muted max-w-3xl mx-auto">Four ways to learn to build with Clawix.</p>
+        </div>
     </div>
+
+    <!-- ============================================ -->
+    <!-- 2. GUIDES -->
+    <!-- ============================================ -->
+    <div class="py-24 bg-clawix-deep border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Guides</h2>
+                <p class="text-lg text-clawix-muted max-w-2xl mx-auto">Step-by-step guides to get you from zero to production.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- GUIDE CARD START -->
+                <a href="guides/installation.html" class="block bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-clawix-sky/50 transition-all group">
+                    <div class="w-12 h-12 bg-clawix-sky/10 text-clawix-sky rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-sky group-hover:text-clawix-deep transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v3a2 2 0 01-2 2M5 12a2 2 0 00-2 2v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 00-2-2m-14 5h.01M19 17h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Installation</h3>
+                    <p class="text-sm text-clawix-muted mb-4">Get Clawix running on-prem or in the cloud.</p>
+                    <span class="text-sm font-medium text-clawix-sky">Read guide &rarr;</span>
+                </a>
+                <!-- GUIDE CARD END -->
+
+                <!-- GUIDE CARD START -->
+                <a href="guides/clawix-basics.html" class="block bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-clawix-active/50 transition-all group">
+                    <div class="w-12 h-12 bg-clawix-active/10 text-clawix-active rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-active group-hover:text-clawix-deep transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Clawix Basics</h3>
+                    <p class="text-sm text-clawix-muted mb-4">Core concepts, terminology, and your first agent.</p>
+                    <span class="text-sm font-medium text-clawix-active">Read guide &rarr;</span>
+                </a>
+                <!-- GUIDE CARD END -->
+
+                <!-- GUIDE CARD START -->
+                <a href="guides/multi-agent-orchestration.html" class="block bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-clawix-purple/50 transition-all group">
+                    <div class="w-12 h-12 bg-clawix-purple/10 text-clawix-purple rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-purple group-hover:text-clawix-deep transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 10-4-4 4 4 0 004 4zm6 0a4 4 0 10-4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Multi-Agent Orchestration</h3>
+                    <p class="text-sm text-clawix-muted mb-4">Design DAG workflows across multiple coordinated agents.</p>
+                    <span class="text-sm font-medium text-clawix-purple">Read guide &rarr;</span>
+                </a>
+                <!-- GUIDE CARD END -->
+
+                <!-- GUIDE CARD START -->
+                <a href="guides/ai-governance-basics.html" class="block bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-clawix-sky/50 transition-all group">
+                    <div class="w-12 h-12 bg-clawix-sky/10 text-clawix-sky rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-sky group-hover:text-clawix-deep transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">AI Governance Basics</h3>
+                    <p class="text-sm text-clawix-muted mb-4">Policies, audit trails, and review gates for responsible AI.</p>
+                    <span class="text-sm font-medium text-clawix-sky">Read guide &rarr;</span>
+                </a>
+                <!-- GUIDE CARD END -->
+
+                <!-- GUIDE CARD START -->
+                <a href="guides/custom-workflows-connectors.html" class="block bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-clawix-active/50 transition-all group">
+                    <div class="w-12 h-12 bg-clawix-active/10 text-clawix-active rounded-xl flex items-center justify-center mb-6 group-hover:bg-clawix-active group-hover:text-clawix-deep transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Custom Workflows &amp; Connectors</h3>
+                    <p class="text-sm text-clawix-muted mb-4">Build custom skills and connect Clawix to your own systems.</p>
+                    <span class="text-sm font-medium text-clawix-active">Read guide &rarr;</span>
+                </a>
+                <!-- GUIDE CARD END -->
+
+                <!--
+                    To add a new guide, copy a block between "GUIDE CARD START" and
+                    "GUIDE CARD END" above, then update the href, icon color classes,
+                    title, description, and link text/color.
+                -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 3. COURSES & TRAINING -->
+    <!-- ============================================ -->
+    <div class="py-24 bg-clawix-deep border-b border-white/10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Courses &amp; Training</h2>
+                <p class="text-lg text-clawix-muted max-w-2xl mx-auto">In-person and virtual sessions to level up your team.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex bg-white/5 border border-white/10 rounded-xl p-1">
+                    <button id="tab-btn-sg" onclick="showCountryTab('sg')" class="px-6 py-2 rounded-lg text-sm font-semibold transition-all bg-clawix-active text-clawix-deep">Singapore</button>
+                    <button id="tab-btn-my" onclick="showCountryTab('my')" class="px-6 py-2 rounded-lg text-sm font-semibold transition-all text-clawix-muted hover:text-white">Malaysia</button>
+                </div>
+            </div>
+
+            <!-- Singapore Panel -->
+            <div id="tab-panel-sg">
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
+                    <h3 class="text-lg font-bold text-white mb-4">Singapore Sessions</h3>
+                    <!-- LUMA EMBED (Singapore) -->
+                    <div class="flex justify-center">
+                        <iframe
+                            src="https://luma.com/embed/calendar/cal-8uMFUrYMDjBlDzG/events"
+                            width="600"
+                            height="450"
+                            frameborder="0"
+                            style="border: 1px solid #bfcbda88; border-radius: 4px; max-width: 100%;"
+                            allowfullscreen=""
+                            aria-hidden="false"
+                            tabindex="0"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Malaysia Panel -->
+            <div id="tab-panel-my" class="hidden">
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
+                    <h3 class="text-lg font-bold text-white mb-4">Malaysia Sessions</h3>
+                    <!-- LUMA EMBED (Malaysia) -->
+                    <div class="flex justify-center">
+                        <iframe
+                            src="https://luma.com/embed/calendar/cal-PlUBRDVYKv8HD1E/events"
+                            width="600"
+                            height="450"
+                            frameborder="0"
+                            style="border: 1px solid #bfcbda88; border-radius: 4px; max-width: 100%;"
+                            allowfullscreen=""
+                            aria-hidden="false"
+                            tabindex="0"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 4. DOCUMENTATION & RESOURCES -->
+    <!-- ============================================ -->
+    <div class="py-24 bg-clawix-deep border-b border-white/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-clawix-indigo to-clawix-deep border border-clawix-active/20 rounded-3xl p-10 lg:p-12 text-center">
+                <div class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-6 border border-white/10 overflow-hidden">
+                    <img src="assets/Clawix_small_icon.png" alt="Clawix" class="w-full h-full object-contain">
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Join the Clawix Community</h2>
+                <p class="text-clawix-muted text-lg mb-8 max-w-xl mx-auto">Ask questions, share what you're building, and get help directly from the team and other builders.</p>
+                <a href="https://discord.com/invite/hFYA8basF2" target="_blank" class="inline-flex items-center bg-clawix-active hover:opacity-90 text-clawix-deep px-8 py-4 rounded-xl font-bold transition-all">
+                    Join Discord
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- 5. CONCEPT EXPLAINERS (FAQ) -->
+    <!-- ============================================ -->
+    <div class="py-24 bg-clawix-deep">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Concept Explainers</h2>
+                <p class="text-lg text-clawix-muted max-w-2xl mx-auto">Quick answers to common questions.</p>
+            </div>
+
+            <div class="space-y-12">
+
+                <!-- FAQ CATEGORY START: Introduction -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Introduction</h3>
+                    <div class="space-y-3">
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What is Clawix?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Clawix is an open-source, self-hosted multi-agent AI orchestration platform designed for secure AI workflow execution, governance, memory management, and scalable agent collaboration inside isolated Docker containers.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Who is Clawix built for?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Clawix is designed for:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>AI consultants building enterprise AI workflows</li>
+                                    <li>AI enthusiasts experimenting with autonomous agents</li>
+                                    <li>Junior developers learning AI orchestration and infrastructure</li>
+                                    <li>Organizations requiring private and governable AI systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What makes Clawix different from other AI agent frameworks?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Clawix focuses on production-grade orchestration with:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Container-isolated agents</li>
+                                    <li>Self-hosted deployment</li>
+                                    <li>Governance and auditability</li>
+                                    <li>Multi-agent collaboration</li>
+                                    <li>Multi-provider AI support</li>
+                                    <li>Persistent memory and workspaces</li>
+                                    <li>Role-based access control</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Is Clawix open source?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Clawix is publicly available as an open-source project under the MIT license.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                    </div>
+                </div>
+                <!-- FAQ CATEGORY END: Introduction -->
+
+                <!-- FAQ CATEGORY START: Core Concepts -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Core Concepts</h3>
+                    <div class="space-y-3">
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What is a multi-agent orchestration platform?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>A multi-agent orchestration platform enables multiple AI agents to collaborate, delegate tasks, share memory, and execute workflows together.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What are AI agents and sub-agents in Clawix?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>AI agents are autonomous assistants powered by large language models (LLMs) that can execute tasks, use tools, and coordinate workflows.</p>
+                                <p class="mt-2">Sub-agents are specialized helper agents dynamically created by primary agents to perform delegated tasks independently inside isolated containers.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What is swarm orchestration?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Swarm orchestration allows multiple AI agents to collaborate in Directed Acyclic Graphs (DAGs), where tasks can run sequentially or in parallel before results are aggregated into a final response.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What are heartbeats and cron workflows?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Heartbeats and cron workflows allow AI agents to execute recurring scheduled tasks such as reminders, monitoring, automation jobs, and periodic reporting.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                    </div>
+                </div>
+                <!-- FAQ CATEGORY END: Core Concepts -->
+
+                <!-- FAQ CATEGORY START: Installation & Deployment -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Installation &amp; Deployment</h3>
+                    <div class="space-y-3">
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What are the prerequisites for Clawix?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Minimum requirements:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Node.js 20+</li>
+                                    <li>pnpm 9+</li>
+                                    <li>Docker</li>
+                                    <li>Docker Desktop</li>
+                                </ul>
+                                <p class="mt-3">Recommended:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Apple Silicon Mac</li>
+                                    <li>16GB RAM or above</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Does Clawix require Docker?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Docker is required because every AI agent runs inside its own isolated container for security, sandboxing, and resource management.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">How do I install Clawix?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Installation steps:</p>
+                                <ol class="list-decimal list-inside mt-2 space-y-1">
+                                    <li>Clone the repository</li>
+                                    <li>Start Docker Desktop</li>
+                                    <li>Run: <code class="text-clawix-sky bg-black/30 px-1.5 py-0.5 rounded text-xs break-all">pnpm run install:clawix</code></li>
+                                </ol>
+                                <p class="mt-3">The installer automatically configures environment variables, builds Docker images, and starts required services.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Do I need to manually create the .env file?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>No. The interactive installer automatically generates the .env file and secure credentials. Manual editing is optional for advanced customization.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What does the installer configure automatically?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>The installer:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Checks prerequisites</li>
+                                    <li>Generates secure secrets</li>
+                                    <li>Configures AI providers</li>
+                                    <li>Creates the initial admin account</li>
+                                    <li>Builds Docker images</li>
+                                    <li>Starts PostgreSQL and Redis</li>
+                                    <li>Boots the Clawix platform</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">How do I start Clawix after installation?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Run: <code class="text-clawix-sky bg-black/30 px-1.5 py-0.5 rounded text-xs break-all">pnpm run dev</code></p>
+                                <p class="mt-2">Then open: <code class="text-clawix-sky bg-black/30 px-1.5 py-0.5 rounded text-xs break-all">http://localhost:3000</code></p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What production deployment commands are available?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Common deployment commands:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><code class="text-clawix-sky bg-black/30 px-1.5 py-0.5 rounded text-xs break-all">pnpm run install:clawix</code></li>
+                                    <li><code class="text-clawix-sky bg-black/30 px-1.5 py-0.5 rounded text-xs break-all">pnpm run update:clawix</code></li>
+                                    <li><code class="text-clawix-sky bg-black/30 px-1.5 py-0.5 rounded text-xs break-all">pnpm run docker:dev</code></li>
+                                    <li><code class="text-clawix-sky bg-black/30 px-1.5 py-0.5 rounded text-xs break-all">pnpm run docker:down</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can organizations self-host Clawix?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Clawix is fully self-hosted, allowing organizations to retain ownership of infrastructure, models, and data.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can Clawix run in production environments?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Clawix is designed for production-grade deployment with isolated execution, governance controls, persistent storage, and multi-user support.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What hardware is recommended for Clawix?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Recommended hardware:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Apple Silicon Mac Mini</li>
+                                    <li>16GB RAM or higher</li>
+                                    <li>SSD storage</li>
+                                </ul>
+                                <p class="mt-3">Clawix can also run on cloud servers and OpenAI-compatible inference infrastructure.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can Clawix run on lightweight hardware or SBC devices?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Lightweight deployments are possible depending on the AI model workload and infrastructure requirements.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                    </div>
+                </div>
+                <!-- FAQ CATEGORY END: Installation & Deployment -->
+
+                <!-- FAQ CATEGORY START: AI Providers & Integrations -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">AI Providers &amp; Integrations</h3>
+                    <div class="space-y-3">
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Which AI providers are currently supported?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Available providers:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Anthropic Claude</li>
+                                    <li>OpenAI GPT</li>
+                                    <li>Z.AI Coding</li>
+                                    <li>OpenAI-compatible APIs</li>
+                                </ul>
+                                <p class="mt-3">Planned providers:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Gemini</li>
+                                    <li>DeepSeek</li>
+                                    <li>Azure OpenAI</li>
+                                    <li>OpenRouter</li>
+                                    <li>Kimi</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can I use local LLMs with Clawix?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Clawix supports OpenAI-compatible endpoints such as Ollama, vLLM, and self-hosted inference APIs.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can I switch AI providers easily?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Clawix uses a provider abstraction layer that allows providers to be configured through environment settings and provider specifications.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Which communication channels are available?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Currently available:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Web Dashboard</li>
+                                    <li>Telegram</li>
+                                </ul>
+                                <p class="mt-3">Planned:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>WhatsApp</li>
+                                    <li>Slack</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Does Clawix support Telegram integration?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Telegram integration is fully supported using Telegram bot tokens configured by Admin users.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can multiple users share one Telegram bot?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Users are identified by their Telegram IDs, allowing multiple users to safely share one Telegram bot.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can the same Telegram bot token be used across multiple systems?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>No. Telegram does not allow the same bot token to be used simultaneously across multiple deployments or running processes.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can Clawix support customer-facing AI assistants?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Planned WhatsApp and Slack integrations are intended for customer support, enterprise workflows, and business communication.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                    </div>
+                </div>
+                <!-- FAQ CATEGORY END: AI Providers & Integrations -->
+
+                <!-- FAQ CATEGORY START: Security, Governance & Permissions -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Security, Governance &amp; Permissions</h3>
+                    <div class="space-y-3">
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Why does Clawix use container isolation?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Container isolation prevents:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Cross-agent interference</li>
+                                    <li>Unauthorized file access</li>
+                                    <li>Resource exhaustion</li>
+                                    <li>Host-level execution risks</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can one agent access another agent's files?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>No. Each agent runs inside its own sandboxed Docker container with isolated workspaces and scoped permissions.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">How are API keys and secrets protected?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Provider API keys and secrets are encrypted using AES-256-GCM encryption and stored securely on the server.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What governance features does Clawix provide?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Governance features include:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Audit logs</li>
+                                    <li>Token budgets</li>
+                                    <li>Structured logging</li>
+                                    <li>Prometheus metrics</li>
+                                    <li>Scoped memory controls</li>
+                                    <li>Role-based access control (RBAC)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What is RBAC?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>RBAC stands for Role-Based Access Control. It manages permissions and access levels for Admin and Developer users.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What user roles are available?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Clawix currently supports:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Admin</li>
+                                    <li>Developer</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What can Admin users do?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Admin users can:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Configure AI providers</li>
+                                    <li>Manage communication channels</li>
+                                    <li>Create and manage users</li>
+                                    <li>Configure Telegram integration</li>
+                                    <li>Manage organization settings and governance policies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What can Developer users do?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Developer users can:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Create and manage agents</li>
+                                    <li>Create sub-agents</li>
+                                    <li>Execute workflows</li>
+                                    <li>Use AI communication channels</li>
+                                </ul>
+                                <p class="mt-3">Developers cannot manage system-wide settings or create Admin accounts.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can there be multiple Admin users?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Existing Admin users can create additional Admin accounts if required.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Does Clawix support AI governance frameworks?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Clawix is designed with governance principles aligned to enterprise AI governance practices, including auditability, accountability, operational oversight, and secure AI execution.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                    </div>
+                </div>
+                <!-- FAQ CATEGORY END: Security, Governance & Permissions -->
+
+                <!-- FAQ CATEGORY START: Memory, Workspaces & Skills -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Memory, Workspaces &amp; Skills</h3>
+                    <div class="space-y-3">
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What is the scoped memory system?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Clawix supports:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Private memory</li>
+                                    <li>Group memory</li>
+                                    <li>Organization-wide memory</li>
+                                </ul>
+                                <p class="mt-3">This enables AI agents to retain contextual knowledge across workflows and teams.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Why is persistent memory important?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Persistent memory allows AI agents to maintain long-term context, improve continuity, and reduce repetitive prompting.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What are persistent workspaces?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Persistent workspaces are user-specific directories that survive container restarts and store files, outputs, and project artifacts.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What are skills in Clawix?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Skills are reusable capabilities that AI agents can execute, including:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Web search</li>
+                                    <li>File operations</li>
+                                    <li>API calls</li>
+                                    <li>Automation workflows</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Can I create custom skills?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Developers can create custom skills dynamically or generate them using the built-in skill-creator agent.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Do skills require programming knowledge?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Basic programming knowledge is helpful, but Clawix also supports natural-language-assisted skill generation.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                    </div>
+                </div>
+                <!-- FAQ CATEGORY END: Memory, Workspaces & Skills -->
+
+                <!-- FAQ CATEGORY START: Development & Contribution -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Development &amp; Contribution</h3>
+                    <div class="space-y-3">
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What technologies are used in Clawix?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Core technologies include:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>NestJS</li>
+                                    <li>Next.js</li>
+                                    <li>TypeScript</li>
+                                    <li>PostgreSQL</li>
+                                    <li>Redis</li>
+                                    <li>Prisma ORM</li>
+                                    <li>Docker</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Is Clawix beginner-friendly for junior developers?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Clawix provides a modern TypeScript architecture, modular services, Docker-based environments, and production-grade engineering practices suitable for learning AI infrastructure development.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">How can I contribute to Clawix?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Contributors can:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Submit pull requests</li>
+                                    <li>Improve documentation</li>
+                                    <li>Create skills</li>
+                                    <li>Develop integrations</li>
+                                    <li>Report bugs</li>
+                                    <li>Participate in governance improvements</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Does Clawix have development standards?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Yes. Clawix follows:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>TypeScript strict mode</li>
+                                    <li>Conventional commits</li>
+                                    <li>Automated testing</li>
+                                    <li>ESLint and Prettier standards</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                    </div>
+                </div>
+                <!-- FAQ CATEGORY END: Development & Contribution -->
+
+                <!-- FAQ CATEGORY START: Troubleshooting -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Troubleshooting</h3>
+                    <div class="space-y-3">
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Why does installation sometimes fail after reinstalling?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Installation failures commonly happen when old Docker volumes still exist while new environment credentials are generated, causing mismatched database credentials.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">How do I fully reset a broken installation?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Remove all containers, volumes, and old environment files before reinstalling:</p>
+                                <p class="mt-2"><code class="text-clawix-sky bg-black/30 px-1.5 py-0.5 rounded text-xs break-all">docker compose -f docker-compose.prod.yml down --volumes --rmi all --remove-orphans</code></p>
+                                <p class="mt-3">Then rerun:</p>
+                                <p class="mt-2"><code class="text-clawix-sky bg-black/30 px-1.5 py-0.5 rounded text-xs break-all">pnpm run install:clawix</code></p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What does "API did not become healthy within 3 minutes" mean?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>This usually indicates:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Database initialization problems</li>
+                                    <li>Missing POSTGRES_PASSWORD</li>
+                                    <li>Old Docker volumes conflicting with new environment variables</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Why do scheduled reminders use the wrong time?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Check the organization timezone settings inside Clawix. The server timezone and configured application timezone may differ.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">Do I need to restart Docker when users switch accounts?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>No. Users can log in, log out, and switch accounts without restarting Docker services.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                    </div>
+                </div>
+                <!-- FAQ CATEGORY END: Troubleshooting -->
+
+                <!-- FAQ CATEGORY START: Roadmap -->
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4">Roadmap</h3>
+                    <div class="space-y-3">
+
+                        <!-- FAQ ITEM START -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left px-6 py-4 gap-4">
+                                <span class="font-semibold text-white text-xs md:text-sm">What features are planned for the future?</span>
+                                <svg class="faq-chevron w-5 h-5 text-clawix-muted shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-4 text-clawix-sky text-xs leading-relaxed">
+                                <p>Planned roadmap items include:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>WhatsApp integration</li>
+                                    <li>Slack integration</li>
+                                    <li>Skill marketplace</li>
+                                    <li>Advanced token analytics</li>
+                                    <li>Multi-region deployment</li>
+                                    <li>Additional AI provider integrations</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- FAQ ITEM END -->
+
+                    </div>
+                </div>
+                <!-- FAQ CATEGORY END: Roadmap -->
+
+                <!--
+                    To add a new FAQ, copy a block between "FAQ ITEM START" and
+                    "FAQ ITEM END" above (inside the relevant category), then
+                    update the question and answer text. To add a new category,
+                    copy a block between "FAQ CATEGORY START" and "FAQ CATEGORY
+                    END".
+                -->
+
+            </div>
+        </div>
+    </div>
+
 </main>
 
-    <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+    <footer class="bg-clawix-deep border-t border-white/10 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
                 <div class="col-span-2 md:col-span-1">
-                    <h4 class="font-bold text-slate-800 mb-4">AIBYML.SG</h4>
+                    <h4 class="font-bold text-white mb-4">AIBYML.SG</h4>
                 </div>
                 <div>
-                    <h4 class="font-bold text-slate-800 mb-4">Navigation</h4>
-                    <ul class="space-y-2 text-sm text-slate-500">
-                        <li><a href="index.html" class="hover:text-clawix-indigo">Home</a></li>
-                        <li><a href="product.html" class="hover:text-clawix-indigo">Product</a></li>
-                        <li><a href="enterprise.html" class="hover:text-clawix-indigo">Enterprise</a></li>
-                        <li><a href="learn.html" class="hover:text-clawix-indigo">Learn</a></li>
-                        <li><a href="blog.html" class="hover:text-clawix-indigo">Insights</a></li>
-                        <li><a href="about.html" class="hover:text-clawix-indigo">About Us</a></li>
+                    <h4 class="font-bold text-white mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-clawix-muted">
+                        <li><a href="index.html" class="hover:text-clawix-active">Home</a></li>
+                        <li><a href="product.html" class="hover:text-clawix-active">Product</a></li>
+                        <li><a href="enterprise.html" class="hover:text-clawix-active">Enterprise</a></li>
+                        <li><a href="learn.html" class="hover:text-clawix-active">Learn</a></li>
+                        <li><a href="insights.html" class="hover:text-clawix-active">Insights</a></li>
+                        <li><a href="about.html" class="hover:text-clawix-active">About Us</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-100 pt-8 text-center text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center">
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-clawix-muted flex flex-col md:flex-row justify-between items-center">
                 <p>&copy; 2026 AIBYML.SG. All rights reserved.</p>
                 <div class="mt-4 md:mt-0 space-x-4">
-                    <a href="privacy.html" class="hover:text-clawix-indigo">Privacy Policy</a>
-                    <a href="#" class="hover:text-clawix-indigo">Terms of Service</a>
+                    <a href="privacy.html" class="hover:text-clawix-active">Privacy Policy</a>
+                    <a href="#" class="hover:text-clawix-active">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -182,6 +1198,28 @@
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
+
+        // Courses & Training: country tab toggle
+        function showCountryTab(country) {
+            const panels = { sg: document.getElementById('tab-panel-sg'), my: document.getElementById('tab-panel-my') };
+            const buttons = { sg: document.getElementById('tab-btn-sg'), my: document.getElementById('tab-btn-my') };
+
+            Object.keys(panels).forEach((key) => {
+                const isActive = key === country;
+                panels[key].classList.toggle('hidden', !isActive);
+                buttons[key].classList.toggle('bg-clawix-active', isActive);
+                buttons[key].classList.toggle('text-clawix-deep', isActive);
+                buttons[key].classList.toggle('text-clawix-muted', !isActive);
+            });
+        }
+
+        // Concept Explainers: FAQ accordion (independent toggles)
+        function toggleFaq(buttonEl) {
+            const answer = buttonEl.nextElementSibling;
+            const chevron = buttonEl.querySelector('.faq-chevron');
+            answer.classList.toggle('hidden');
+            chevron.classList.toggle('rotate-180');
+        }
     </script>
 </body>
 </html>
